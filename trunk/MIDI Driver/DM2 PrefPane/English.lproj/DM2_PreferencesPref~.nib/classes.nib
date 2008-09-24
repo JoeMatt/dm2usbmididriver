@@ -1,0 +1,123 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {cancelUpdate = id; checkForUpdates = id; }; 
+            CLASS = Controller; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                progressField = id; 
+                progressIndicator = id; 
+                progressPanel = id; 
+                versionField = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                bank1InvertLedsCheckboxClicked = id; 
+                bank1StickyButtonsCheckboxClicked = id; 
+                bank2InvertLedsCheckboxClicked = id; 
+                bank2StickyButtonsCheckboxClicked = id; 
+                bank3InvertLedsCheckboxClicked = id; 
+                bank3StickyButtonsCheckboxClicked = id; 
+                bank4InvertLedsCheckboxClicked = id; 
+                bank4StickyButtonsCheckboxClicked = id; 
+                checkAutomaticallyCheckboxClicked = id; 
+                checkForUpdateButtonClicked = id; 
+                checkIfPluginIsUpToDate = id; 
+                clearLEDsButtonClicked = id; 
+                contactAuthorButtonClicked = id; 
+                copyPluginToSystem = id; 
+                displaysMIDIClockCheckboxClicked = id; 
+                exportTraktorButtonClicked = id; 
+                growlSupportCheckboxClicked = id; 
+                helpButtonClicked = id; 
+                loadQuartz = id; 
+                midiClockResolutionMatrixChanged = id; 
+                openReadme = id; 
+                registerButtonClicked = id; 
+                resetCalibrationButtonClicked = id; 
+                resetInterfaceButtonClicked = id; 
+                saveButtonClicked = id; 
+                scratchRingBumpIgnorePopUpButtonChanged = id; 
+                softwareModeComboBoxChanged = id; 
+                visitHomepageButtonClicked = id; 
+                whoControlsLEDsPopUpButtonChanged = id; 
+            }; 
+            CLASS = "DM2_PreferencesPref"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                bank1DisplaysMIDIClockCheckbox = NSButton; 
+                bank1InvertLedsCheckbox = NSButton; 
+                bank1ScratchRingBumpIgnorePopUpButton = NSButton; 
+                bank1StickyButtonsCheckbox = NSButton; 
+                bank1WhoControlsLEDsPopUpButton = NSButton; 
+                bank2DisplaysMIDIClockCheckbox = NSButton; 
+                bank2InvertLedsCheckbox = NSButton; 
+                bank2ScratchRingBumpIgnorePopUpButton = NSButton; 
+                bank2StickyButtonsCheckbox = NSButton; 
+                bank2WhoControlsLEDsPopUpButton = NSButton; 
+                bank3DisplaysMIDIClockCheckbox = NSButton; 
+                bank3InvertLedsCheckbox = NSButton; 
+                bank3ScratchRingBumpIgnorePopUpButton = NSButton; 
+                bank3StickyButtonsCheckbox = NSButton; 
+                bank3WhoControlsLEDsPopUpButton = NSButton; 
+                bank4DisplaysMIDIClockCheckbox = NSButton; 
+                bank4InvertLedsCheckbox = NSButton; 
+                bank4ScratchRingBumpIgnorePopUpButton = NSButton; 
+                bank4StickyButtonsCheckbox = NSButton; 
+                bank4WhoControlsLEDsPopUpButton = NSButton; 
+                checkAutomaticallyCheckbox = NSButton; 
+                checkForUpdateButton = NSButton; 
+                clearLEDsButton = NSButton; 
+                contactAuthorButton = NSButton; 
+                exportTraktorButton = NSButton; 
+                growlSupportCheckbox = NSButton; 
+                helpButton = NSButton; 
+                midiClockResolutionMatrix = NSMatrix; 
+                osWarningTextField = NSTextField; 
+                readmeTextView = NSTextView; 
+                registerButton = NSButton; 
+                resetCalibrationButton = NSButton; 
+                resetInterface = NSButton; 
+                saveButton = NSButton; 
+                softwareModeButton = NSPopUpButton; 
+                tabView = NSTabView; 
+                visitHomepageButton = NSButton; 
+            }; 
+            SUPERCLASS = NSPreferencePane; 
+        }, 
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = NSPreferencePane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_firstKeyView" = id; 
+                "_initialKeyView" = id; 
+                "_lastKeyView" = id; 
+                "_window" = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = NSSegmentedControl; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {
+            ACTIONS = {cancelUpdate = id; checkForUpdates = id; }; 
+            CLASS = Updater; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                checkProgressInidicator = NSProgressIndicator; 
+                progressField = id; 
+                progressIndicator = id; 
+                progressPanel = id; 
+                versionField = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

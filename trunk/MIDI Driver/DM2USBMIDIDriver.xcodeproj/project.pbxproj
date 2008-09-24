@@ -1,0 +1,1296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		305A6D500C8904D300D17230 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 305A6D620C8904E200D17230 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				305A6D6C0C8904F700D17230 /* PBXTargetDependency */,
+				305A6D6A0C8904F100D17230 /* PBXTargetDependency */,
+				305A6D680C8904F000D17230 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		3001B9C60CAB426500B18679 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3001B9C50CAB426500B18679 /* main.m */; };
+		300F904E0D6A11EB007A4B15 /* DM2 Preferences.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = 301A34A40C14CE47007B58B5 /* DM2 Preferences.prefPane */; };
+		301A35750C14CF87007B58B5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301A35720C14CF87007B58B5 /* Cocoa.framework */; };
+		301A35770C14CF87007B58B5 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301A35740C14CF87007B58B5 /* PreferencePanes.framework */; };
+		301A360C0C14CFF7007B58B5 /* DM2_PreferencesPref.m in Sources */ = {isa = PBXBuildFile; fileRef = 301A36090C14CFF7007B58B5 /* DM2_PreferencesPref.m */; };
+		301A360D0C14CFF7007B58B5 /* DM2_PreferencesPref.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 301A360A0C14CFF7007B58B5 /* DM2_PreferencesPref.tiff */; };
+		301A361C0C14D127007B58B5 /* DM2_PreferencesPref.nib in Resources */ = {isa = PBXBuildFile; fileRef = 301A36160C14D127007B58B5 /* DM2_PreferencesPref.nib */; };
+		301A361E0C14D127007B58B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 301A361A0C14D127007B58B5 /* InfoPlist.strings */; };
+		301A36210C14D165007B58B5 /* DM2 Preferences_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 301A36070C14CFF7007B58B5 /* DM2 Preferences_Prefix.pch */; };
+		301A36220C14D165007B58B5 /* DM2_PreferencesPref.h in Headers */ = {isa = PBXBuildFile; fileRef = 301A36080C14CFF7007B58B5 /* DM2_PreferencesPref.h */; };
+		3023A80B0E89CB5400CE6A81 /* DM2Configuration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3023A7F60E89CB5400CE6A81 /* DM2Configuration.cpp */; };
+		3023A80C0E89CB5400CE6A81 /* DM2Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3023A7F70E89CB5400CE6A81 /* DM2Configuration.h */; };
+		3023A80F0E89CB5400CE6A81 /* MixxxConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3023A7FB0E89CB5400CE6A81 /* MixxxConfiguration.cpp */; };
+		3023A8100E89CB5400CE6A81 /* MixxxConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3023A7FC0E89CB5400CE6A81 /* MixxxConfiguration.h */; };
+		3023A8110E89CB5400CE6A81 /* TraktorConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3023A7FE0E89CB5400CE6A81 /* TraktorConfiguration.cpp */; };
+		3023A8120E89CB5400CE6A81 /* TraktorConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3023A7FF0E89CB5400CE6A81 /* TraktorConfiguration.h */; };
+		3023A8130E89CB5400CE6A81 /* TraktorEQConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3023A8000E89CB5400CE6A81 /* TraktorEQConfiguration.h */; };
+		3023A8140E89CB5400CE6A81 /* TraktorEQMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3023A8010E89CB5400CE6A81 /* TraktorEQMode.cpp */; };
+		3023A8150E89CB5400CE6A81 /* TraktorEQMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3023A8020E89CB5400CE6A81 /* TraktorEQMode.h */; };
+		3023A8160E89CB5400CE6A81 /* TraktorFXMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3023A8030E89CB5400CE6A81 /* TraktorFXMode.cpp */; };
+		3023A8170E89CB5400CE6A81 /* TraktorFXMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3023A8040E89CB5400CE6A81 /* TraktorFXMode.h */; };
+		3023A8180E89CB5400CE6A81 /* TraktorLoopMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3023A8050E89CB5400CE6A81 /* TraktorLoopMode.cpp */; };
+		3023A8190E89CB5400CE6A81 /* TraktorLoopMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3023A8060E89CB5400CE6A81 /* TraktorLoopMode.h */; };
+		3023A81A0E89CB5400CE6A81 /* TraktorMixMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3023A8070E89CB5400CE6A81 /* TraktorMixMode.cpp */; };
+		3023A81B0E89CB5400CE6A81 /* TraktorMixMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3023A8080E89CB5400CE6A81 /* TraktorMixMode.h */; };
+		3023A81C0E89CB5400CE6A81 /* TraktorModeInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3023A8090E89CB5400CE6A81 /* TraktorModeInterface.cpp */; };
+		3023A81D0E89CB5400CE6A81 /* TraktorModeInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 3023A80A0E89CB5400CE6A81 /* TraktorModeInterface.h */; };
+		30375E3B0C0CFE0400DDBB71 /* DM2USBMIDIDriver.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 30375E370C0CFCFE00DDBB71 /* DM2USBMIDIDriver.plugin */; };
+		303FDBAF0C66DA04008A4E33 /* DM2USBMIDI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 303FDBAD0C66DA04008A4E33 /* DM2USBMIDI.cpp */; };
+		3042E73A0E108E0C0018D881 /* NSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3042E7380E108E0C0018D881 /* NSStringAdditions.h */; };
+		3042E73B0E108E0C0018D881 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3042E7390E108E0C0018D881 /* NSStringAdditions.m */; };
+		305783E00E1886B100706D3D /* DM2Preview.m in Sources */ = {isa = PBXBuildFile; fileRef = 305783DF0E1886B100706D3D /* DM2Preview.m */; };
+		305A66240C87A3F700D17230 /* DM2.qtz in Resources */ = {isa = PBXBuildFile; fileRef = 305A66230C87A3F700D17230 /* DM2.qtz */; };
+		305A68110C87CAF500D17230 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 305A67FB0C87CAF500D17230 /* InfoPlist.strings */; };
+		305A68120C87CAF500D17230 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 305A67FD0C87CAF500D17230 /* MainMenu.nib */; };
+		305A68310C87CB9C00D17230 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301A35720C14CF87007B58B5 /* Cocoa.framework */; };
+		305A694E0C87F67800D17230 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305A69450C87F67800D17230 /* Quartz.framework */; };
+		305A6D820C8906FE00D17230 /* NSApplicationIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 305A6D810C8906FE00D17230 /* NSApplicationIcon.icns */; };
+		305A6E360C89132F00D17230 /* DM2USBMIDIDriver.plugin in Resources */ = {isa = PBXBuildFile; fileRef = 30375E370C0CFCFE00DDBB71 /* DM2USBMIDIDriver.plugin */; };
+		305A6E7E0C89178800D17230 /* DM2.tks in Resources */ = {isa = PBXBuildFile; fileRef = 305A6E7D0C89178800D17230 /* DM2.tks */; };
+		305A737D0C8A6AA700D17230 /* NSFileManagerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 305A737B0C8A6AA700D17230 /* NSFileManagerAdditions.h */; };
+		305A737E0C8A6AA700D17230 /* NSFileManagerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 305A737C0C8A6AA700D17230 /* NSFileManagerAdditions.m */; };
+		305A73900C8A6B0700D17230 /* NSApplicationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 305A738E0C8A6B0700D17230 /* NSApplicationAdditions.h */; };
+		305A73910C8A6B0700D17230 /* NSApplicationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 305A738F0C8A6B0700D17230 /* NSApplicationAdditions.m */; };
+		305A73DA0C8A6BA800D17230 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305A73A50C8A6BA800D17230 /* Security.framework */; };
+		305A74C80C8A76E900D17230 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301A35730C14CF87007B58B5 /* Foundation.framework */; };
+		305A74CD0C8A770300D17230 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
+		305A755E0C8A94C300D17230 /* move in Resources */ = {isa = PBXBuildFile; fileRef = 305A75590C8A948000D17230 /* move */; };
+		305A756B0C8A955100D17230 /* move.m in Sources */ = {isa = PBXBuildFile; fileRef = 305A756A0C8A955100D17230 /* move.m */; };
+		30636F2C0D9CA04C006B4042 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30636F2B0D9CA04C006B4042 /* AppKit.framework */; };
+		307291CB0C49A08E00B5B4D4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 307291CA0C49A08E00B5B4D4 /* Icon.png */; };
+		307D0F8B0C7918030078AAAF /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307D0F7C0C7918030078AAAF /* CoreServices.framework */; };
+		308B9F7C0C4BCA2D00219DF3 /* Read me.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 308B9F7B0C4BCA2D00219DF3 /* Read me.rtfd */; };
+		309127440C9E08CB00BA3923 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3091273C0C9E08CB00BA3923 /* Growl.framework */; settings = {ATTRIBUTES = (weak, ); }; };
+		309175F00D69EDC900272464 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309175EF0D69EDC900272464 /* ApplicationServices.framework */; };
+		3092D49D0C4B2B14003A3062 /* PrefIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3092D49C0C4B2B14003A3062 /* PrefIcon.png */; };
+		3092D4DB0C4B36AA003A3062 /* Update.h in Headers */ = {isa = PBXBuildFile; fileRef = 3092D4D90C4B36AA003A3062 /* Update.h */; };
+		3092D4DC0C4B36AA003A3062 /* Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 3092D4DA0C4B36AA003A3062 /* Update.m */; };
+		3098391E0D6341A000EF6F20 /* DropImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3098391C0D6341A000EF6F20 /* DropImageView.h */; };
+		3098391F0D6341A000EF6F20 /* DropImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3098391D0D6341A000EF6F20 /* DropImageView.m */; };
+		309839990D637F3100EF6F20 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309839980D637F3100EF6F20 /* Carbon.framework */; };
+		30A21A6D0C5E8D5B002EF13D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301A35730C14CF87007B58B5 /* Foundation.framework */; };
+		30A21CB30C6182A7002EF13D /* DM2 Structs.h in Headers */ = {isa = PBXBuildFile; fileRef = 30A21CB20C6182A7002EF13D /* DM2 Structs.h */; };
+		3EB3AB3F079D51BB0046E3F3 /* IOServiceClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F4D90177994001CA2136 /* IOServiceClient.h */; };
+		3EB3AB40079D51BB0046E3F3 /* MIDIDriverClass.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F4DD0177994001CA2136 /* MIDIDriverClass.h */; };
+		3EB3AB41079D51BB0046E3F3 /* MIDIDriverDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F4DF0177994001CA2136 /* MIDIDriverDevice.h */; };
+		3EB3AB42079D51BB0046E3F3 /* MIDIDriverUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F4E10177994001CA2136 /* MIDIDriverUtils.h */; };
+		3EB3AB43079D51BB0046E3F3 /* USBDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F4E30177994001CA2136 /* USBDevice.h */; };
+		3EB3AB44079D51BB0046E3F3 /* USBDeviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F4E50177994001CA2136 /* USBDeviceManager.h */; };
+		3EB3AB45079D51BB0046E3F3 /* USBInterfaceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F4E70177994001CA2136 /* USBInterfaceManager.h */; };
+		3EB3AB46079D51BB0046E3F3 /* USBMIDIDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F4E90177994001CA2136 /* USBMIDIDevice.h */; };
+		3EB3AB47079D51BB0046E3F3 /* USBMIDIDeviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F4EB0177994001CA2136 /* USBMIDIDeviceManager.h */; };
+		3EB3AB48079D51BB0046E3F3 /* USBMIDIDriverBase.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F4ED0177994001CA2136 /* USBMIDIDriverBase.h */; };
+		3EB3AB49079D51BB0046E3F3 /* USBVendorMIDIDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F4EF0177994001CA2136 /* USBVendorMIDIDriver.h */; };
+		3EB3AB4A079D51BB0046E3F3 /* DM2USBMIDI.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F50A017799E301CA2136 /* DM2USBMIDI.h */; };
+		3EB3AB4B079D51BB0046E3F3 /* CAHostTimeBase.h in Headers */ = {isa = PBXBuildFile; fileRef = F490F211C5B03DDB00A007D0 /* CAHostTimeBase.h */; };
+		3EB3AB4C079D51BB0046E3F3 /* CAMutex.h in Headers */ = {isa = PBXBuildFile; fileRef = F490F215C5B03DDB00A007D0 /* CAMutex.h */; };
+		3EB3AB4F079D51BB0046E3F3 /* IOServiceClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F509F4D80177994001CA2136 /* IOServiceClient.cpp */; };
+		3EB3AB50079D51BB0046E3F3 /* MIDIDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F509F4DC0177994001CA2136 /* MIDIDriver.cpp */; };
+		3EB3AB51079D51BB0046E3F3 /* MIDIDriverDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F509F4DE0177994001CA2136 /* MIDIDriverDevice.cpp */; };
+		3EB3AB52079D51BB0046E3F3 /* MIDIDriverUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F509F4E00177994001CA2136 /* MIDIDriverUtils.cpp */; };
+		3EB3AB53079D51BB0046E3F3 /* USBDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F509F4E20177994001CA2136 /* USBDevice.cpp */; };
+		3EB3AB54079D51BB0046E3F3 /* USBDeviceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F509F4E40177994001CA2136 /* USBDeviceManager.cpp */; };
+		3EB3AB55079D51BB0046E3F3 /* USBInterfaceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F509F4E60177994001CA2136 /* USBInterfaceManager.cpp */; };
+		3EB3AB56079D51BB0046E3F3 /* USBMIDIDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F509F4E80177994001CA2136 /* USBMIDIDevice.cpp */; };
+		3EB3AB57079D51BB0046E3F3 /* USBMIDIDeviceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F509F4EA0177994001CA2136 /* USBMIDIDeviceManager.cpp */; };
+		3EB3AB58079D51BB0046E3F3 /* USBMIDIDriverBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F509F4EC0177994001CA2136 /* USBMIDIDriverBase.cpp */; };
+		3EB3AB59079D51BB0046E3F3 /* USBVendorMIDIDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F509F4EE0177994001CA2136 /* USBVendorMIDIDriver.cpp */; };
+		3EB3AB5B079D51BB0046E3F3 /* CAHostTimeBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F490F210C5B03DDB00A007D0 /* CAHostTimeBase.cpp */; };
+		3EB3AB5C079D51BB0046E3F3 /* CAMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F490F214C5B03DDB00A007D0 /* CAMutex.cpp */; };
+		3EB3AB5E079D51BB0046E3F3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
+		3EB3AB5F079D51BB0046E3F3 /* CoreMIDIServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5706D20014B0B17015B338A /* CoreMIDIServer.framework */; };
+		3EB3AB60079D51BB0046E3F3 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5706D23014B0BC6015B338A /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		305A6D670C8904F000D17230 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 305A67F00C87CADF00D17230;
+			remoteInfo = "DM2 Preview";
+		};
+		305A6D690C8904F100D17230 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 301A34A30C14CE47007B58B5;
+			remoteInfo = "DM2 Preferences";
+		};
+		305A6D6B0C8904F700D17230 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EB3AB3D079D51BB0046E3F3;
+			remoteInfo = DM2USBMIDIDriver;
+		};
+		305A75610C8A950500D17230 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 305A75580C8A948000D17230;
+			remoteInfo = move;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		300F90480D6A11C1007A4B15 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = /Users/lounger/Library/PreferencePanes;
+			dstSubfolderSpec = 0;
+			files = (
+				300F904E0D6A11EB007A4B15 /* DM2 Preferences.prefPane in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301748F40C7CA25C0059B6B3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30E7717F0C02B73F003A8664 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "/Library/Audio/MIDI Drivers";
+			dstSubfolderSpec = 0;
+			files = (
+				30375E3B0C0CFE0400DDBB71 /* DM2USBMIDIDriver.plugin in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		3001B9C50CAB426500B18679 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "DM2 Preview/main.m"; sourceTree = "<group>"; };
+		300F91550D6A9B98007A4B15 /* Mixman DM2.midi.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Mixman DM2.midi.xml"; path = "Other/Mixman DM2.midi.xml"; sourceTree = "<group>"; };
+		301A34A40C14CE47007B58B5 /* DM2 Preferences.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DM2 Preferences.prefPane"; sourceTree = BUILT_PRODUCTS_DIR; };
+		301A34A60C14CE47007B58B5 /* DM2 Preferences.prefPane-Info.plist */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.xml; name = "DM2 Preferences.prefPane-Info.plist"; path = "DM2 PrefPane/DM2 Preferences.prefPane-Info.plist"; sourceTree = "<group>"; };
+		301A35720C14CF87007B58B5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		301A35730C14CF87007B58B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		301A35740C14CF87007B58B5 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
+		301A36070C14CFF7007B58B5 /* DM2 Preferences_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "DM2 Preferences_Prefix.pch"; sourceTree = "<group>"; };
+		301A36080C14CFF7007B58B5 /* DM2_PreferencesPref.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DM2_PreferencesPref.h; sourceTree = "<group>"; };
+		301A36090C14CFF7007B58B5 /* DM2_PreferencesPref.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DM2_PreferencesPref.m; sourceTree = "<group>"; };
+		301A360A0C14CFF7007B58B5 /* DM2_PreferencesPref.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = DM2_PreferencesPref.tiff; path = "DM2 PrefPane/DM2_PreferencesPref.tiff"; sourceTree = "<group>"; };
+		301A36170C14D127007B58B5 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = DM2_PreferencesPref.nib; sourceTree = "<group>"; };
+		301A361B0C14D127007B58B5 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = InfoPlist.strings; sourceTree = "<group>"; };
+		3023A7F60E89CB5400CE6A81 /* DM2Configuration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DM2Configuration.cpp; sourceTree = "<group>"; };
+		3023A7F70E89CB5400CE6A81 /* DM2Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DM2Configuration.h; sourceTree = "<group>"; };
+		3023A7FB0E89CB5400CE6A81 /* MixxxConfiguration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MixxxConfiguration.cpp; sourceTree = "<group>"; };
+		3023A7FC0E89CB5400CE6A81 /* MixxxConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixxxConfiguration.h; sourceTree = "<group>"; };
+		3023A7FE0E89CB5400CE6A81 /* TraktorConfiguration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TraktorConfiguration.cpp; sourceTree = "<group>"; };
+		3023A7FF0E89CB5400CE6A81 /* TraktorConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraktorConfiguration.h; sourceTree = "<group>"; };
+		3023A8000E89CB5400CE6A81 /* TraktorEQConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraktorEQConfiguration.h; sourceTree = "<group>"; };
+		3023A8010E89CB5400CE6A81 /* TraktorEQMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TraktorEQMode.cpp; sourceTree = "<group>"; };
+		3023A8020E89CB5400CE6A81 /* TraktorEQMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraktorEQMode.h; sourceTree = "<group>"; };
+		3023A8030E89CB5400CE6A81 /* TraktorFXMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TraktorFXMode.cpp; sourceTree = "<group>"; };
+		3023A8040E89CB5400CE6A81 /* TraktorFXMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraktorFXMode.h; sourceTree = "<group>"; };
+		3023A8050E89CB5400CE6A81 /* TraktorLoopMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TraktorLoopMode.cpp; sourceTree = "<group>"; };
+		3023A8060E89CB5400CE6A81 /* TraktorLoopMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraktorLoopMode.h; sourceTree = "<group>"; };
+		3023A8070E89CB5400CE6A81 /* TraktorMixMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TraktorMixMode.cpp; sourceTree = "<group>"; };
+		3023A8080E89CB5400CE6A81 /* TraktorMixMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraktorMixMode.h; sourceTree = "<group>"; };
+		3023A8090E89CB5400CE6A81 /* TraktorModeInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TraktorModeInterface.cpp; sourceTree = "<group>"; };
+		3023A80A0E89CB5400CE6A81 /* TraktorModeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraktorModeInterface.h; sourceTree = "<group>"; };
+		3023AA8A0E89CBE700CE6A81 /* DriverDevelopmentNotes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = DriverDevelopmentNotes.rtf; sourceTree = "<group>"; };
+		3023AA8B0E89CBE700CE6A81 /* notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = notes.txt; sourceTree = "<group>"; };
+		3023AA8C0E89CBE700CE6A81 /* ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
+		30375E370C0CFCFE00DDBB71 /* DM2USBMIDIDriver.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DM2USBMIDIDriver.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		303FDBAD0C66DA04008A4E33 /* DM2USBMIDI.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = DM2USBMIDI.cpp; sourceTree = "<group>"; };
+		3042E7380E108E0C0018D881 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		3042E7390E108E0C0018D881 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		305783DE0E1886B100706D3D /* DM2Preview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DM2Preview.h; path = "DM2 Preview/DM2Preview.h"; sourceTree = "<group>"; };
+		305783DF0E1886B100706D3D /* DM2Preview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DM2Preview.m; path = "DM2 Preview/DM2Preview.m"; sourceTree = "<group>"; };
+		305A66230C87A3F700D17230 /* DM2.qtz */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = DM2.qtz; path = "DM2 PrefPane/DM2.qtz"; sourceTree = "<group>"; };
+		305A67F10C87CADF00D17230 /* DM2 Preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DM2 Preview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		305A67F30C87CADF00D17230 /* DM2 Preview-Info */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "DM2 Preview-Info"; path = "DM2 Preview/DM2 Preview-Info"; sourceTree = "<group>"; };
+		305A67FC0C87CAF500D17230 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = InfoPlist.strings; sourceTree = "<group>"; };
+		305A67FE0C87CAF500D17230 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = MainMenu.nib; sourceTree = "<group>"; };
+		305A68010C87CAF500D17230 /* DM2 Preview-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = "DM2 Preview-Info.plist"; path = "DM2 Preview/DM2 Preview-Info.plist"; sourceTree = "<group>"; };
+		305A69450C87F67800D17230 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
+		305A6D810C8906FE00D17230 /* NSApplicationIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = NSApplicationIcon.icns; path = "DM2 Preview/NSApplicationIcon.icns"; sourceTree = "<group>"; };
+		305A6E7D0C89178800D17230 /* DM2.tks */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; name = DM2.tks; path = Other/DM2.tks; sourceTree = "<group>"; };
+		305A737B0C8A6AA700D17230 /* NSFileManagerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerAdditions.h; sourceTree = "<group>"; };
+		305A737C0C8A6AA700D17230 /* NSFileManagerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerAdditions.m; sourceTree = "<group>"; };
+		305A738E0C8A6B0700D17230 /* NSApplicationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSApplicationAdditions.h; sourceTree = "<group>"; };
+		305A738F0C8A6B0700D17230 /* NSApplicationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSApplicationAdditions.m; sourceTree = "<group>"; };
+		305A73A50C8A6BA800D17230 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		305A75590C8A948000D17230 /* move */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = move; sourceTree = BUILT_PRODUCTS_DIR; };
+		305A756A0C8A955100D17230 /* move.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = move.m; path = "DM2 PrefPane/move.m"; sourceTree = "<group>"; };
+		30636F2B0D9CA04C006B4042 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		307291CA0C49A08E00B5B4D4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "Release files/Icon.png"; sourceTree = SOURCE_ROOT; };
+		307291E80C49B1A200B5B4D4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "Release files/Icon.png"; sourceTree = "<group>"; };
+		307D0F7C0C7918030078AAAF /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		308B9F7B0C4BCA2D00219DF3 /* Read me.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = "Read me.rtfd"; path = "Release files/Read me.rtfd"; sourceTree = "<group>"; };
+		3091253D0C9E057900BA3923 /* DM2 Preview_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "DM2 Preview_Prefix.pch"; path = "DM2 Preview/DM2 Preview_Prefix.pch"; sourceTree = "<group>"; };
+		3091273C0C9E08CB00BA3923 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = "External Libraries/Growl.framework"; sourceTree = "<group>"; };
+		309175EF0D69EDC900272464 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		3092D49C0C4B2B14003A3062 /* PrefIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PrefIcon.png; path = "Release files/PrefIcon.png"; sourceTree = SOURCE_ROOT; };
+		3092D4D90C4B36AA003A3062 /* Update.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Update.h; sourceTree = "<group>"; };
+		3092D4DA0C4B36AA003A3062 /* Update.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Update.m; sourceTree = "<group>"; };
+		3098391C0D6341A000EF6F20 /* DropImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropImageView.h; sourceTree = "<group>"; };
+		3098391D0D6341A000EF6F20 /* DropImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropImageView.m; sourceTree = "<group>"; };
+		309839980D637F3100EF6F20 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		30A21CB20C6182A7002EF13D /* DM2 Structs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DM2 Structs.h"; sourceTree = "<group>"; };
+		30E772320C032986003A8664 /* dm2_old.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = dm2_old.cpp; sourceTree = "<group>"; };
+		30E772330C032986003A8664 /* dm2_old.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = dm2_old.h; sourceTree = "<group>"; };
+		3EB3AB62079D51BB0046E3F3 /* Info-DM2USBMIDIDriver.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-DM2USBMIDIDriver.plist"; sourceTree = "<group>"; };
+		F490F210C5B03DDB00A007D0 /* CAHostTimeBase.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CAHostTimeBase.cpp; sourceTree = "<group>"; };
+		F490F211C5B03DDB00A007D0 /* CAHostTimeBase.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CAHostTimeBase.h; sourceTree = "<group>"; };
+		F490F214C5B03DDB00A007D0 /* CAMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CAMutex.cpp; sourceTree = "<group>"; };
+		F490F215C5B03DDB00A007D0 /* CAMutex.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CAMutex.h; sourceTree = "<group>"; };
+		F509F4D70177994001CA2136 /* Architecture.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = Architecture.txt; sourceTree = "<group>"; };
+		F509F4D80177994001CA2136 /* IOServiceClient.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = IOServiceClient.cpp; sourceTree = "<group>"; };
+		F509F4D90177994001CA2136 /* IOServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = IOServiceClient.h; sourceTree = "<group>"; };
+		F509F4DA0177994001CA2136 /* MIDIBackCompatible.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = MIDIBackCompatible.cpp; sourceTree = "<group>"; };
+		F509F4DB0177994001CA2136 /* MIDIBackCompatible.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MIDIBackCompatible.h; sourceTree = "<group>"; };
+		F509F4DC0177994001CA2136 /* MIDIDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = MIDIDriver.cpp; sourceTree = "<group>"; };
+		F509F4DD0177994001CA2136 /* MIDIDriverClass.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MIDIDriverClass.h; sourceTree = "<group>"; };
+		F509F4DE0177994001CA2136 /* MIDIDriverDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = MIDIDriverDevice.cpp; sourceTree = "<group>"; };
+		F509F4DF0177994001CA2136 /* MIDIDriverDevice.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MIDIDriverDevice.h; sourceTree = "<group>"; };
+		F509F4E00177994001CA2136 /* MIDIDriverUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = MIDIDriverUtils.cpp; sourceTree = "<group>"; };
+		F509F4E10177994001CA2136 /* MIDIDriverUtils.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MIDIDriverUtils.h; sourceTree = "<group>"; };
+		F509F4E20177994001CA2136 /* USBDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = USBDevice.cpp; sourceTree = "<group>"; };
+		F509F4E30177994001CA2136 /* USBDevice.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = USBDevice.h; sourceTree = "<group>"; };
+		F509F4E40177994001CA2136 /* USBDeviceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = USBDeviceManager.cpp; sourceTree = "<group>"; };
+		F509F4E50177994001CA2136 /* USBDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = USBDeviceManager.h; sourceTree = "<group>"; };
+		F509F4E60177994001CA2136 /* USBInterfaceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = USBInterfaceManager.cpp; sourceTree = "<group>"; };
+		F509F4E70177994001CA2136 /* USBInterfaceManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = USBInterfaceManager.h; sourceTree = "<group>"; };
+		F509F4E80177994001CA2136 /* USBMIDIDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = USBMIDIDevice.cpp; sourceTree = "<group>"; };
+		F509F4E90177994001CA2136 /* USBMIDIDevice.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = USBMIDIDevice.h; sourceTree = "<group>"; };
+		F509F4EA0177994001CA2136 /* USBMIDIDeviceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = USBMIDIDeviceManager.cpp; sourceTree = "<group>"; };
+		F509F4EB0177994001CA2136 /* USBMIDIDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = USBMIDIDeviceManager.h; sourceTree = "<group>"; };
+		F509F4EC0177994001CA2136 /* USBMIDIDriverBase.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = USBMIDIDriverBase.cpp; sourceTree = "<group>"; };
+		F509F4ED0177994001CA2136 /* USBMIDIDriverBase.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = USBMIDIDriverBase.h; sourceTree = "<group>"; };
+		F509F4EE0177994001CA2136 /* USBVendorMIDIDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = USBVendorMIDIDriver.cpp; sourceTree = "<group>"; };
+		F509F4EF0177994001CA2136 /* USBVendorMIDIDriver.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = USBVendorMIDIDriver.h; sourceTree = "<group>"; };
+		F509F508017799E301CA2136 /* DM2USBMIDI.exp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.exports; name = DM2USBMIDI.exp; path = ../DM2USBMIDIDriver/DM2USBMIDI.exp; sourceTree = "<group>"; };
+		F509F50A017799E301CA2136 /* DM2USBMIDI.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DM2USBMIDI.h; path = ../DM2USBMIDIDriver/DM2USBMIDI.h; sourceTree = "<group>"; };
+		F55F18B701554564010C93F4 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = /System/Library/Frameworks/CoreMIDI.framework; sourceTree = "<absolute>"; };
+		F5706D20014B0B17015B338A /* CoreMIDIServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDIServer.framework; path = /System/Library/Frameworks/CoreMIDIServer.framework; sourceTree = "<absolute>"; };
+		F5706D23014B0BC6015B338A /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		301A34A20C14CE47007B58B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301A35750C14CF87007B58B5 /* Cocoa.framework in Frameworks */,
+				301A35770C14CF87007B58B5 /* PreferencePanes.framework in Frameworks */,
+				305A73DA0C8A6BA800D17230 /* Security.framework in Frameworks */,
+				305A74C80C8A76E900D17230 /* Foundation.framework in Frameworks */,
+				305A74CD0C8A770300D17230 /* CoreFoundation.framework in Frameworks */,
+				309839990D637F3100EF6F20 /* Carbon.framework in Frameworks */,
+				309175F00D69EDC900272464 /* ApplicationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305A67EF0C87CADF00D17230 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305A68310C87CB9C00D17230 /* Cocoa.framework in Frameworks */,
+				305A694E0C87F67800D17230 /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305A75570C8A948000D17230 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EB3AB5D079D51BB0046E3F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3AB5E079D51BB0046E3F3 /* CoreFoundation.framework in Frameworks */,
+				3EB3AB5F079D51BB0046E3F3 /* CoreMIDIServer.framework in Frameworks */,
+				3EB3AB60079D51BB0046E3F3 /* IOKit.framework in Frameworks */,
+				30A21A6D0C5E8D5B002EF13D /* Foundation.framework in Frameworks */,
+				307D0F8B0C7918030078AAAF /* CoreServices.framework in Frameworks */,
+				309127440C9E08CB00BA3923 /* Growl.framework in Frameworks */,
+				30636F2C0D9CA04C006B4042 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* MIDIDrivers */ = {
+			isa = PBXGroup;
+			children = (
+				3023AA890E89CBE700CE6A81 /* Documentation */,
+				F509F4D50177994001CA2136 /* DM2USBMIDIDriver */,
+				301A36140C14D0DC007B58B5 /* Pref Pane */,
+				305A67EA0C87CA6200D17230 /* DM2 Preview */,
+				3098389D0D62898E00EF6F20 /* Shared */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				19C28FB6FE9D52B211CA2CBB /* Products */,
+			);
+			name = MIDIDrivers;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				30636F2B0D9CA04C006B4042 /* AppKit.framework */,
+				309175EF0D69EDC900272464 /* ApplicationServices.framework */,
+				309839980D637F3100EF6F20 /* Carbon.framework */,
+				3091273C0C9E08CB00BA3923 /* Growl.framework */,
+				305A73A50C8A6BA800D17230 /* Security.framework */,
+				305A69450C87F67800D17230 /* Quartz.framework */,
+				307D0F7C0C7918030078AAAF /* CoreServices.framework */,
+				301A35720C14CF87007B58B5 /* Cocoa.framework */,
+				301A35730C14CF87007B58B5 /* Foundation.framework */,
+				301A35740C14CF87007B58B5 /* PreferencePanes.framework */,
+				0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */,
+				F5706D20014B0B17015B338A /* CoreMIDIServer.framework */,
+				F5706D23014B0BC6015B338A /* IOKit.framework */,
+				F55F18B701554564010C93F4 /* CoreMIDI.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30375E370C0CFCFE00DDBB71 /* DM2USBMIDIDriver.plugin */,
+				301A34A40C14CE47007B58B5 /* DM2 Preferences.prefPane */,
+				305A67F10C87CADF00D17230 /* DM2 Preview.app */,
+				305A75590C8A948000D17230 /* move */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		301A360F0C14D013007B58B5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3098391C0D6341A000EF6F20 /* DropImageView.h */,
+				3098391D0D6341A000EF6F20 /* DropImageView.m */,
+				305A738E0C8A6B0700D17230 /* NSApplicationAdditions.h */,
+				305A738F0C8A6B0700D17230 /* NSApplicationAdditions.m */,
+				3092D4D90C4B36AA003A3062 /* Update.h */,
+				3092D4DA0C4B36AA003A3062 /* Update.m */,
+				301A36070C14CFF7007B58B5 /* DM2 Preferences_Prefix.pch */,
+				301A36080C14CFF7007B58B5 /* DM2_PreferencesPref.h */,
+				301A36090C14CFF7007B58B5 /* DM2_PreferencesPref.m */,
+				305A737B0C8A6AA700D17230 /* NSFileManagerAdditions.h */,
+				305A737C0C8A6AA700D17230 /* NSFileManagerAdditions.m */,
+				3042E7380E108E0C0018D881 /* NSStringAdditions.h */,
+				3042E7390E108E0C0018D881 /* NSStringAdditions.m */,
+			);
+			name = Source;
+			path = "DM2 PrefPane";
+			sourceTree = "<group>";
+		};
+		301A36140C14D0DC007B58B5 /* Pref Pane */ = {
+			isa = PBXGroup;
+			children = (
+				305A756A0C8A955100D17230 /* move.m */,
+				305A6E7D0C89178800D17230 /* DM2.tks */,
+				305A66230C87A3F700D17230 /* DM2.qtz */,
+				300F91550D6A9B98007A4B15 /* Mixman DM2.midi.xml */,
+				308B9F7B0C4BCA2D00219DF3 /* Read me.rtfd */,
+				307291E80C49B1A200B5B4D4 /* Icon.png */,
+				301A36150C14D127007B58B5 /* English.lproj */,
+				301A360A0C14CFF7007B58B5 /* DM2_PreferencesPref.tiff */,
+				301A34A60C14CE47007B58B5 /* DM2 Preferences.prefPane-Info.plist */,
+				301A360F0C14D013007B58B5 /* Source */,
+			);
+			name = "Pref Pane";
+			sourceTree = "<group>";
+		};
+		301A36150C14D127007B58B5 /* English.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				301A36160C14D127007B58B5 /* DM2_PreferencesPref.nib */,
+				301A361A0C14D127007B58B5 /* InfoPlist.strings */,
+				307291CA0C49A08E00B5B4D4 /* Icon.png */,
+				3092D49C0C4B2B14003A3062 /* PrefIcon.png */,
+			);
+			name = English.lproj;
+			path = "DM2 PrefPane/English.lproj";
+			sourceTree = "<group>";
+		};
+		3023A7F50E89CB5400CE6A81 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				3023A7F60E89CB5400CE6A81 /* DM2Configuration.cpp */,
+				3023A7F70E89CB5400CE6A81 /* DM2Configuration.h */,
+				3023A7FA0E89CB5400CE6A81 /* Mixxx */,
+				3023A7FD0E89CB5400CE6A81 /* Traktor */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		3023A7FA0E89CB5400CE6A81 /* Mixxx */ = {
+			isa = PBXGroup;
+			children = (
+				3023A7FB0E89CB5400CE6A81 /* MixxxConfiguration.cpp */,
+				3023A7FC0E89CB5400CE6A81 /* MixxxConfiguration.h */,
+			);
+			path = Mixxx;
+			sourceTree = "<group>";
+		};
+		3023A7FD0E89CB5400CE6A81 /* Traktor */ = {
+			isa = PBXGroup;
+			children = (
+				3023A7FE0E89CB5400CE6A81 /* TraktorConfiguration.cpp */,
+				3023A7FF0E89CB5400CE6A81 /* TraktorConfiguration.h */,
+				3023A8000E89CB5400CE6A81 /* TraktorEQConfiguration.h */,
+				3023A8010E89CB5400CE6A81 /* TraktorEQMode.cpp */,
+				3023A8020E89CB5400CE6A81 /* TraktorEQMode.h */,
+				3023A8030E89CB5400CE6A81 /* TraktorFXMode.cpp */,
+				3023A8040E89CB5400CE6A81 /* TraktorFXMode.h */,
+				3023A8050E89CB5400CE6A81 /* TraktorLoopMode.cpp */,
+				3023A8060E89CB5400CE6A81 /* TraktorLoopMode.h */,
+				3023A8070E89CB5400CE6A81 /* TraktorMixMode.cpp */,
+				3023A8080E89CB5400CE6A81 /* TraktorMixMode.h */,
+				3023A8090E89CB5400CE6A81 /* TraktorModeInterface.cpp */,
+				3023A80A0E89CB5400CE6A81 /* TraktorModeInterface.h */,
+			);
+			path = Traktor;
+			sourceTree = "<group>";
+		};
+		3023AA890E89CBE700CE6A81 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				3023AA8A0E89CBE700CE6A81 /* DriverDevelopmentNotes.rtf */,
+				3023AA8B0E89CBE700CE6A81 /* notes.txt */,
+				3023AA8C0E89CBE700CE6A81 /* ReadMe.rtf */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
+		305A67EA0C87CA6200D17230 /* DM2 Preview */ = {
+			isa = PBXGroup;
+			children = (
+				3091253D0C9E057900BA3923 /* DM2 Preview_Prefix.pch */,
+				305A67F30C87CADF00D17230 /* DM2 Preview-Info */,
+				305A6D810C8906FE00D17230 /* NSApplicationIcon.icns */,
+				305A67FA0C87CAF500D17230 /* English.lproj */,
+				305A68010C87CAF500D17230 /* DM2 Preview-Info.plist */,
+				3001B9C50CAB426500B18679 /* main.m */,
+				305783DE0E1886B100706D3D /* DM2Preview.h */,
+				305783DF0E1886B100706D3D /* DM2Preview.m */,
+			);
+			name = "DM2 Preview";
+			sourceTree = "<group>";
+		};
+		305A67FA0C87CAF500D17230 /* English.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				305A67FB0C87CAF500D17230 /* InfoPlist.strings */,
+				305A67FD0C87CAF500D17230 /* MainMenu.nib */,
+			);
+			name = English.lproj;
+			path = "DM2 Preview/English.lproj";
+			sourceTree = "<group>";
+		};
+		3098389D0D62898E00EF6F20 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		F490F11DC5B03DDB00A007D0 /* PublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				F490F210C5B03DDB00A007D0 /* CAHostTimeBase.cpp */,
+				F490F211C5B03DDB00A007D0 /* CAHostTimeBase.h */,
+				F490F214C5B03DDB00A007D0 /* CAMutex.cpp */,
+				F490F215C5B03DDB00A007D0 /* CAMutex.h */,
+			);
+			name = PublicUtility;
+			path = /Developer/Examples/CoreAudio/PublicUtility;
+			sourceTree = "<absolute>";
+		};
+		F509F4D40177994001CA2136 /* External Source */ = {
+			isa = PBXGroup;
+			children = (
+				F490F11DC5B03DDB00A007D0 /* PublicUtility */,
+				F509F4D60177994001CA2136 /* Shared */,
+			);
+			name = "External Source";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F509F4D50177994001CA2136 /* DM2USBMIDIDriver */ = {
+			isa = PBXGroup;
+			children = (
+				3023A7F50E89CB5400CE6A81 /* Configurations */,
+				F509F4D40177994001CA2136 /* External Source */,
+				3EB3AB62079D51BB0046E3F3 /* Info-DM2USBMIDIDriver.plist */,
+				F509F508017799E301CA2136 /* DM2USBMIDI.exp */,
+				30A21CB20C6182A7002EF13D /* DM2 Structs.h */,
+				F509F50A017799E301CA2136 /* DM2USBMIDI.h */,
+				303FDBAD0C66DA04008A4E33 /* DM2USBMIDI.cpp */,
+				30E772320C032986003A8664 /* dm2_old.cpp */,
+				30E772330C032986003A8664 /* dm2_old.h */,
+			);
+			path = DM2USBMIDIDriver;
+			sourceTree = "<group>";
+		};
+		F509F4D60177994001CA2136 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F509F4D70177994001CA2136 /* Architecture.txt */,
+				F509F4D80177994001CA2136 /* IOServiceClient.cpp */,
+				F509F4D90177994001CA2136 /* IOServiceClient.h */,
+				F509F4DA0177994001CA2136 /* MIDIBackCompatible.cpp */,
+				F509F4DB0177994001CA2136 /* MIDIBackCompatible.h */,
+				F509F4DC0177994001CA2136 /* MIDIDriver.cpp */,
+				F509F4DD0177994001CA2136 /* MIDIDriverClass.h */,
+				F509F4DE0177994001CA2136 /* MIDIDriverDevice.cpp */,
+				F509F4DF0177994001CA2136 /* MIDIDriverDevice.h */,
+				F509F4E00177994001CA2136 /* MIDIDriverUtils.cpp */,
+				F509F4E10177994001CA2136 /* MIDIDriverUtils.h */,
+				F509F4E20177994001CA2136 /* USBDevice.cpp */,
+				F509F4E30177994001CA2136 /* USBDevice.h */,
+				F509F4E40177994001CA2136 /* USBDeviceManager.cpp */,
+				F509F4E50177994001CA2136 /* USBDeviceManager.h */,
+				F509F4E60177994001CA2136 /* USBInterfaceManager.cpp */,
+				F509F4E70177994001CA2136 /* USBInterfaceManager.h */,
+				F509F4E80177994001CA2136 /* USBMIDIDevice.cpp */,
+				F509F4E90177994001CA2136 /* USBMIDIDevice.h */,
+				F509F4EA0177994001CA2136 /* USBMIDIDeviceManager.cpp */,
+				F509F4EB0177994001CA2136 /* USBMIDIDeviceManager.h */,
+				F509F4EC0177994001CA2136 /* USBMIDIDriverBase.cpp */,
+				F509F4ED0177994001CA2136 /* USBMIDIDriverBase.h */,
+				F509F4EE0177994001CA2136 /* USBVendorMIDIDriver.cpp */,
+				F509F4EF0177994001CA2136 /* USBVendorMIDIDriver.h */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		301A361F0C14D154007B58B5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301A36210C14D165007B58B5 /* DM2 Preferences_Prefix.pch in Headers */,
+				301A36220C14D165007B58B5 /* DM2_PreferencesPref.h in Headers */,
+				3092D4DB0C4B36AA003A3062 /* Update.h in Headers */,
+				30A21CB30C6182A7002EF13D /* DM2 Structs.h in Headers */,
+				305A737D0C8A6AA700D17230 /* NSFileManagerAdditions.h in Headers */,
+				305A73900C8A6B0700D17230 /* NSApplicationAdditions.h in Headers */,
+				3098391E0D6341A000EF6F20 /* DropImageView.h in Headers */,
+				3042E73A0E108E0C0018D881 /* NSStringAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EB3AB3E079D51BB0046E3F3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3AB3F079D51BB0046E3F3 /* IOServiceClient.h in Headers */,
+				3EB3AB40079D51BB0046E3F3 /* MIDIDriverClass.h in Headers */,
+				3EB3AB41079D51BB0046E3F3 /* MIDIDriverDevice.h in Headers */,
+				3EB3AB42079D51BB0046E3F3 /* MIDIDriverUtils.h in Headers */,
+				3EB3AB43079D51BB0046E3F3 /* USBDevice.h in Headers */,
+				3EB3AB44079D51BB0046E3F3 /* USBDeviceManager.h in Headers */,
+				3EB3AB45079D51BB0046E3F3 /* USBInterfaceManager.h in Headers */,
+				3EB3AB46079D51BB0046E3F3 /* USBMIDIDevice.h in Headers */,
+				3EB3AB47079D51BB0046E3F3 /* USBMIDIDeviceManager.h in Headers */,
+				3EB3AB48079D51BB0046E3F3 /* USBMIDIDriverBase.h in Headers */,
+				3EB3AB49079D51BB0046E3F3 /* USBVendorMIDIDriver.h in Headers */,
+				3EB3AB4A079D51BB0046E3F3 /* DM2USBMIDI.h in Headers */,
+				3EB3AB4B079D51BB0046E3F3 /* CAHostTimeBase.h in Headers */,
+				3EB3AB4C079D51BB0046E3F3 /* CAMutex.h in Headers */,
+				3023A80C0E89CB5400CE6A81 /* DM2Configuration.h in Headers */,
+				3023A8100E89CB5400CE6A81 /* MixxxConfiguration.h in Headers */,
+				3023A8120E89CB5400CE6A81 /* TraktorConfiguration.h in Headers */,
+				3023A8130E89CB5400CE6A81 /* TraktorEQConfiguration.h in Headers */,
+				3023A8150E89CB5400CE6A81 /* TraktorEQMode.h in Headers */,
+				3023A8170E89CB5400CE6A81 /* TraktorFXMode.h in Headers */,
+				3023A8190E89CB5400CE6A81 /* TraktorLoopMode.h in Headers */,
+				3023A81B0E89CB5400CE6A81 /* TraktorMixMode.h in Headers */,
+				3023A81D0E89CB5400CE6A81 /* TraktorModeInterface.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		301A34A30C14CE47007B58B5 /* DM2 Preferences */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 301A34A70C14CE48007B58B5 /* Build configuration list for PBXNativeTarget "DM2 Preferences" */;
+			buildPhases = (
+				301A361F0C14D154007B58B5 /* Headers */,
+				301A34A00C14CE47007B58B5 /* Resources */,
+				301A34A10C14CE47007B58B5 /* Sources */,
+				301A34A20C14CE47007B58B5 /* Frameworks */,
+				305A6B6B0C88D0BF00D17230 /* ShellScript */,
+				300F90480D6A11C1007A4B15 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				305A75620C8A950500D17230 /* PBXTargetDependency */,
+			);
+			name = "DM2 Preferences";
+			productName = "DM2 Preferences.prefPane";
+			productReference = 301A34A40C14CE47007B58B5 /* DM2 Preferences.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+		305A67F00C87CADF00D17230 /* DM2 Preview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 305A67F40C87CADF00D17230 /* Build configuration list for PBXNativeTarget "DM2 Preview" */;
+			buildPhases = (
+				305A67ED0C87CADF00D17230 /* Resources */,
+				305A67EE0C87CADF00D17230 /* Sources */,
+				305A67EF0C87CADF00D17230 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DM2 Preview";
+			productName = "DM2 Preview";
+			productReference = 305A67F10C87CADF00D17230 /* DM2 Preview.app */;
+			productType = "com.apple.product-type.application";
+		};
+		305A75580C8A948000D17230 /* move */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 305A755B0C8A949F00D17230 /* Build configuration list for PBXNativeTarget "move" */;
+			buildPhases = (
+				305A75560C8A948000D17230 /* Sources */,
+				305A75570C8A948000D17230 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = move;
+			productName = move;
+			productReference = 305A75590C8A948000D17230 /* move */;
+			productType = "com.apple.product-type.tool";
+		};
+		3EB3AB3D079D51BB0046E3F3 /* DM2USBMIDIDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EAAFBD908984664003EB3A7 /* Build configuration list for PBXNativeTarget "DM2USBMIDIDriver" */;
+			buildPhases = (
+				3EB3AB3E079D51BB0046E3F3 /* Headers */,
+				3EB3AB4D079D51BB0046E3F3 /* Resources */,
+				301748F40C7CA25C0059B6B3 /* CopyFiles */,
+				3EB3AB4E079D51BB0046E3F3 /* Sources */,
+				3EB3AB5D079D51BB0046E3F3 /* Frameworks */,
+				3EB3AB61079D51BB0046E3F3 /* Rez */,
+				305A6BB90C88D8D600D17230 /* ShellScript */,
+				30E7717F0C02B73F003A8664 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DM2USBMIDIDriver;
+			productInstallPath = "/Library/Audio/MIDI Drivers";
+			productName = RolandUSBMIDI;
+			productReference = 30375E370C0CFCFE00DDBB71 /* DM2USBMIDIDriver.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = NO;
+			};
+			buildConfigurationList = 3EAAFBDC08984664003EB3A7 /* Build configuration list for PBXProject "DM2USBMIDIDriver" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* MIDIDrivers */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				305A6D500C8904D300D17230 /* All */,
+				3EB3AB3D079D51BB0046E3F3 /* DM2USBMIDIDriver */,
+				301A34A30C14CE47007B58B5 /* DM2 Preferences */,
+				305A67F00C87CADF00D17230 /* DM2 Preview */,
+				305A75580C8A948000D17230 /* move */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		301A34A00C14CE47007B58B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301A360D0C14CFF7007B58B5 /* DM2_PreferencesPref.tiff in Resources */,
+				301A361C0C14D127007B58B5 /* DM2_PreferencesPref.nib in Resources */,
+				301A361E0C14D127007B58B5 /* InfoPlist.strings in Resources */,
+				307291CB0C49A08E00B5B4D4 /* Icon.png in Resources */,
+				3092D49D0C4B2B14003A3062 /* PrefIcon.png in Resources */,
+				308B9F7C0C4BCA2D00219DF3 /* Read me.rtfd in Resources */,
+				305A66240C87A3F700D17230 /* DM2.qtz in Resources */,
+				305A6E360C89132F00D17230 /* DM2USBMIDIDriver.plugin in Resources */,
+				305A6E7E0C89178800D17230 /* DM2.tks in Resources */,
+				305A755E0C8A94C300D17230 /* move in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305A67ED0C87CADF00D17230 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305A68110C87CAF500D17230 /* InfoPlist.strings in Resources */,
+				305A68120C87CAF500D17230 /* MainMenu.nib in Resources */,
+				305A6D820C8906FE00D17230 /* NSApplicationIcon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EB3AB4D079D51BB0046E3F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		3EB3AB61079D51BB0046E3F3 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		305A6B6B0C88D0BF00D17230 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /usr/bin/perl;
+			shellScript = "# /usr/bin/perl -w\n#\n# Last updated: 21MAR06, Andy O'Meara and Rob Barris\n#\n# This is an Xcode post-build phase script for devs who sleep better at night knowing\n#    that their deployment binaries are as stripped as possible.  This makes life more difficult\n#    for a hacker/cracker to locate sensitive code to trace, study, and/or extract.\n#\n# This script will execute only if the Xcode \"Deployment Postprocessing\" setting\n#    is set (aka DEPLOYMENT_POSTPROCESSING).\n#\n# The downside to shipping a stripped binary is that your user's crash reports\n#    will be useless unless you have a link map to convert code offsets (from a stack trace)\n#    into proc names.  To address this, this script moves your pre-stripped executable\n#    to the build dir, appending \"_full\" to the filename, allowing you to retain it for\n#    the day you need it in order to decipher a stack trace.  You do this by using 'atos'\n#    with the original generated binary (type 'man atos' for info).\n#\n# Recommended Xcode build settings:\n#    Dead Code Stripping                  YES\n#    Only Link In Essential Symbols       NO\n#    Deployment Postprocessing            YES (this activates this script)\n#    Strip Linked Product                 NO\n#    Use Separate Strip                   NO\n#    Strip Style                          All Symbols\n#    Strip Debug Symbols During Copy      NO\n#    Preserve Private External Symbols    NO\n#    Separate PCH Symbols                 YES\n#    Symbols Hidden By Default            YES (Critical!)\n#    Inline Functions Hidden              YES\n#\n# Note that if you're building a dynamic library, you'll need to explicitly\n#    declare any symbols that you want to be exported.  See the following:\n#    file:///Developer/ADC%20Reference%20Library/documentation/DeveloperTools/Conceptual/CppRuntimeEnv/Articles/SymbolVisibility.html\n#\n\nuse strict;\n\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n#exit 0;\n# This script is activated via an Xcode env flag.\nif ( $ENV{DEPLOYMENT_POSTPROCESSING} ne \"YES\" ) {\n\tgoto seticon;\n   exit 0;\n}\n\nprint \"\\n\\n==================== Commencing external stripping phase...\\n\";\n   \nmy $PLUGIN\t   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}\";     \nmy $BINARY       = \"$PLUGIN/Contents/MacOS/$ENV{EXECUTABLE_NAME}\";\nmy $BINARY_FULL  = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{EXECUTABLE_NAME}_full\";\nmy $BINARY_i386  = \"${BINARY}_i386\";\nmy $BINARY_ppc   = \"${BINARY}_ppc\";\nmy $RELEASEDIR   = \"$ENV{SRCROOT}/Release Files\";\n       \n# Extract each arch into a \"thin\" binary for stripping\n`lipo \"$BINARY\" -thin  ppc -output \"$BINARY_ppc\" `;\n`lipo \"$BINARY\" -thin i386 -output \"$BINARY_i386\"`;\n\n# Retain the orignal binary for QA and use with the util 'atos'\n`mv -f \"$BINARY\" \"$BINARY_FULL\"`;\n\n# Perform desired stripping on each thin binary.  \n`strip -S -x -o \"${BINARY_ppc}_tmp\"  -r \"$BINARY_ppc\" `;\n`strip -S -x -o \"${BINARY_i386}_tmp\" -r \"$BINARY_i386\"`;\n\n# We're now done with the original thin binaries, so chuck them.\n`rm -f \"$BINARY_ppc\" `;\n`rm -f \"$BINARY_i386\"`;\n\n# Make the new universal binary from our stripped thin pieces.\n`lipo -arch i386 \"${BINARY_i386}_tmp\" -arch ppc \"${BINARY_ppc}_tmp\" -create -output \"$BINARY\"`;\n\n# We're now done with the temp thin binaries, so chuck them.\n`rm -f \"${BINARY_ppc}_tmp\" `;\n`rm -f \"${BINARY_i386}_tmp\"`;\n\n\nprint \"\\n==================== External strip phase complete\\n\";\nseticon:\nprint \"==Set icon\\n\";\n`/usr/local/bin/seticon -d \"$RELEASEDIR/../PrefpaneIcon.icns\" \"$PLUGIN\"`;\n`/usr/local/bin/seticon \"$RELEASEDIR/Icon.png\" \"$PLUGIN/Contents/Resources/DM2USBMIDIDriver.plugin\"`;\n\n#EOF\n";
+		};
+		305A6BB90C88D8D600D17230 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /usr/bin/perl;
+			shellScript = "# /usr/bin/perl -w\n#\n# Last updated: 21MAR06, Andy O'Meara and Rob Barris\n#\n# This is an Xcode post-build phase script for devs who sleep better at night knowing\n#    that their deployment binaries are as stripped as possible.  This makes life more difficult\n#    for a hacker/cracker to locate sensitive code to trace, study, and/or extract.\n#\n# This script will execute only if the Xcode \"Deployment Postprocessing\" setting\n#    is set (aka DEPLOYMENT_POSTPROCESSING).\n#\n# The downside to shipping a stripped binary is that your user's crash reports\n#    will be useless unless you have a link map to convert code offsets (from a stack trace)\n#    into proc names.  To address this, this script moves your pre-stripped executable\n#    to the build dir, appending \"_full\" to the filename, allowing you to retain it for\n#    the day you need it in order to decipher a stack trace.  You do this by using 'atos'\n#    with the original generated binary (type 'man atos' for info).\n#\n# Recommended Xcode build settings:\n#    Dead Code Stripping                  YES\n#    Only Link In Essential Symbols       NO\n#    Deployment Postprocessing            YES (this activates this script)\n#    Strip Linked Product                 NO\n#    Use Separate Strip                   NO\n#    Strip Style                          All Symbols\n#    Strip Debug Symbols During Copy      NO\n#    Preserve Private External Symbols    NO\n#    Separate PCH Symbols                 YES\n#    Symbols Hidden By Default            YES (Critical!)\n#    Inline Functions Hidden              YES\n#\n# Note that if you're building a dynamic library, you'll need to explicitly\n#    declare any symbols that you want to be exported.  See the following:\n#    file:///Developer/ADC%20Reference%20Library/documentation/DeveloperTools/Conceptual/CppRuntimeEnv/Articles/SymbolVisibility.html\n#\n\nuse strict;\n\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n#exit 0;\n# This script is activated via an Xcode env flag.\nif ( $ENV{DEPLOYMENT_POSTPROCESSING} ne \"YES\" ) {\n\tgoto seticon;\n   exit 0;\n}\n\nprint \"\\n\\n==================== Commencing external stripping phase...\\n\";\n   \nmy $PLUGIN\t   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}\";     \nmy $BINARY       = \"$PLUGIN/Contents/MacOS/$ENV{EXECUTABLE_NAME}\";\nmy $BINARY_FULL  = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{EXECUTABLE_NAME}_full\";\nmy $BINARY_i386  = \"${BINARY}_i386\";\nmy $BINARY_ppc   = \"${BINARY}_ppc\";\nmy $RELEASEDIR   = \"$ENV{SRCROOT}/Release Files\";\n       \n# Extract each arch into a \"thin\" binary for stripping\n`lipo \"$BINARY\" -thin  ppc -output \"$BINARY_ppc\" `;\n`lipo \"$BINARY\" -thin i386 -output \"$BINARY_i386\"`;\n\n# Retain the orignal binary for QA and use with the util 'atos'\n`mv -f \"$BINARY\" \"$BINARY_FULL\"`;\n\n# Perform desired stripping on each thin binary.  \n`strip -S -x -o \"${BINARY_ppc}_tmp\"  -r \"$BINARY_ppc\" `;\n`strip -S -x -o \"${BINARY_i386}_tmp\" -r \"$BINARY_i386\"`;\n\n# We're now done with the original thin binaries, so chuck them.\n`rm -f \"$BINARY_ppc\" `;\n`rm -f \"$BINARY_i386\"`;\n\n# Make the new universal binary from our stripped thin pieces.\n`lipo -arch i386 \"${BINARY_i386}_tmp\" -arch ppc \"${BINARY_ppc}_tmp\" -create -output \"$BINARY\"`;\n\n# We're now done with the temp thin binaries, so chuck them.\n`rm -f \"${BINARY_ppc}_tmp\" `;\n`rm -f \"${BINARY_i386}_tmp\"`;\n\n\nprint \"\\n==================== External strip phase complete\\n\";\nseticon:\nprint \"==Set icon\\n\";\n`/usr/local/bin/seticon \"$RELEASEDIR/Icon.png\" \"$PLUGIN\"`;\n\n#EOF\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		301A34A10C14CE47007B58B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301A360C0C14CFF7007B58B5 /* DM2_PreferencesPref.m in Sources */,
+				3092D4DC0C4B36AA003A3062 /* Update.m in Sources */,
+				305A737E0C8A6AA700D17230 /* NSFileManagerAdditions.m in Sources */,
+				305A73910C8A6B0700D17230 /* NSApplicationAdditions.m in Sources */,
+				3098391F0D6341A000EF6F20 /* DropImageView.m in Sources */,
+				3042E73B0E108E0C0018D881 /* NSStringAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305A67EE0C87CADF00D17230 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3001B9C60CAB426500B18679 /* main.m in Sources */,
+				305783E00E1886B100706D3D /* DM2Preview.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305A75560C8A948000D17230 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305A756B0C8A955100D17230 /* move.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EB3AB4E079D51BB0046E3F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB3AB4F079D51BB0046E3F3 /* IOServiceClient.cpp in Sources */,
+				3EB3AB50079D51BB0046E3F3 /* MIDIDriver.cpp in Sources */,
+				3EB3AB51079D51BB0046E3F3 /* MIDIDriverDevice.cpp in Sources */,
+				3EB3AB52079D51BB0046E3F3 /* MIDIDriverUtils.cpp in Sources */,
+				3EB3AB53079D51BB0046E3F3 /* USBDevice.cpp in Sources */,
+				3EB3AB54079D51BB0046E3F3 /* USBDeviceManager.cpp in Sources */,
+				3EB3AB55079D51BB0046E3F3 /* USBInterfaceManager.cpp in Sources */,
+				3EB3AB56079D51BB0046E3F3 /* USBMIDIDevice.cpp in Sources */,
+				3EB3AB57079D51BB0046E3F3 /* USBMIDIDeviceManager.cpp in Sources */,
+				3EB3AB58079D51BB0046E3F3 /* USBMIDIDriverBase.cpp in Sources */,
+				3EB3AB59079D51BB0046E3F3 /* USBVendorMIDIDriver.cpp in Sources */,
+				3EB3AB5B079D51BB0046E3F3 /* CAHostTimeBase.cpp in Sources */,
+				3EB3AB5C079D51BB0046E3F3 /* CAMutex.cpp in Sources */,
+				303FDBAF0C66DA04008A4E33 /* DM2USBMIDI.cpp in Sources */,
+				3023A80B0E89CB5400CE6A81 /* DM2Configuration.cpp in Sources */,
+				3023A80F0E89CB5400CE6A81 /* MixxxConfiguration.cpp in Sources */,
+				3023A8110E89CB5400CE6A81 /* TraktorConfiguration.cpp in Sources */,
+				3023A8140E89CB5400CE6A81 /* TraktorEQMode.cpp in Sources */,
+				3023A8160E89CB5400CE6A81 /* TraktorFXMode.cpp in Sources */,
+				3023A8180E89CB5400CE6A81 /* TraktorLoopMode.cpp in Sources */,
+				3023A81A0E89CB5400CE6A81 /* TraktorMixMode.cpp in Sources */,
+				3023A81C0E89CB5400CE6A81 /* TraktorModeInterface.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		305A6D680C8904F000D17230 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 305A67F00C87CADF00D17230 /* DM2 Preview */;
+			targetProxy = 305A6D670C8904F000D17230 /* PBXContainerItemProxy */;
+		};
+		305A6D6A0C8904F100D17230 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 301A34A30C14CE47007B58B5 /* DM2 Preferences */;
+			targetProxy = 305A6D690C8904F100D17230 /* PBXContainerItemProxy */;
+		};
+		305A6D6C0C8904F700D17230 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EB3AB3D079D51BB0046E3F3 /* DM2USBMIDIDriver */;
+			targetProxy = 305A6D6B0C8904F700D17230 /* PBXContainerItemProxy */;
+		};
+		305A75620C8A950500D17230 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 305A75580C8A948000D17230 /* move */;
+			targetProxy = 305A75610C8A950500D17230 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		301A36160C14D127007B58B5 /* DM2_PreferencesPref.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				301A36170C14D127007B58B5 /* English */,
+			);
+			name = DM2_PreferencesPref.nib;
+			sourceTree = "<group>";
+		};
+		301A361A0C14D127007B58B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				301A361B0C14D127007B58B5 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		305A67FB0C87CAF500D17230 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				305A67FC0C87CAF500D17230 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		305A67FD0C87CAF500D17230 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				305A67FE0C87CAF500D17230 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		301A34A80C14CE48007B58B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "DM2 PrefPane/DM2 Preferences.prefPane-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_2)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/External Libraries\"";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+					"-lcrypto",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "DM2 Preferences";
+				WRAPPER_EXTENSION = prefPane;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		301A34A90C14CE48007B58B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "DM2 PrefPane/DM2 Preferences.prefPane-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_2)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/External Libraries\"";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+					"-lcrypto",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "DM2 Preferences";
+				WRAPPER_EXTENSION = prefPane;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		305A67F50C87CADF00D17230 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "DM2 Preview/DM2 Preview-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "DM2 Preview";
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		305A67F60C87CADF00D17230 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "DM2 Preview/DM2 Preview-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "DM2 Preview";
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		305A6D630C8904E200D17230 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+			};
+			name = Development;
+		};
+		305A6D640C8904E200D17230 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = All;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		305A755C0C8A949F00D17230 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = move;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		305A755D0C8A949F00D17230 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = "$(HOME)/bin";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = move;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		3EAAFBDA08984664003EB3A7 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUGGING_SYMBOLS = YES;
+				EXPORTED_SYMBOLS_FILE = DM2USBMIDIDriver/DM2USBMIDI.exp;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/External Libraries\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "DM2USBMIDIDriver/Info-DM2USBMIDIDriver.plist";
+				INSTALL_PATH = "/Library/Audio/MIDI Drivers";
+				OTHER_CFLAGS = "-DDEBUG";
+				OTHER_LDFLAGS = (
+					"-lc",
+					"-weak_framework",
+					Growl,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DM2USBMIDIDriver;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Development;
+		};
+		3EAAFBDB08984664003EB3A7 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXPORTED_SYMBOLS_FILE = DM2USBMIDIDriver/DM2USBMIDI.exp;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)/External Libraries\"";
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_UNROLL_LOOPS = YES;
+				INFOPLIST_FILE = "DM2USBMIDIDriver/Info-DM2USBMIDIDriver.plist";
+				INSTALL_PATH = "/Library/Audio/MIDI Drivers";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lc",
+					"-weak_framework",
+					Growl,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DM2USBMIDIDriver;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = plugin;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		3EAAFBDD08984664003EB3A7 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Development;
+		};
+		3EAAFBDE08984664003EB3A7 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				DEAD_CODE_STRIPPING = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk/;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk/;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Deployment;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		301A34A70C14CE48007B58B5 /* Build configuration list for PBXNativeTarget "DM2 Preferences" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				301A34A80C14CE48007B58B5 /* Development */,
+				301A34A90C14CE48007B58B5 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		305A67F40C87CADF00D17230 /* Build configuration list for PBXNativeTarget "DM2 Preview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305A67F50C87CADF00D17230 /* Development */,
+				305A67F60C87CADF00D17230 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		305A6D620C8904E200D17230 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305A6D630C8904E200D17230 /* Development */,
+				305A6D640C8904E200D17230 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		305A755B0C8A949F00D17230 /* Build configuration list for PBXNativeTarget "move" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305A755C0C8A949F00D17230 /* Development */,
+				305A755D0C8A949F00D17230 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		3EAAFBD908984664003EB3A7 /* Build configuration list for PBXNativeTarget "DM2USBMIDIDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EAAFBDA08984664003EB3A7 /* Development */,
+				3EAAFBDB08984664003EB3A7 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		3EAAFBDC08984664003EB3A7 /* Build configuration list for PBXProject "DM2USBMIDIDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EAAFBDD08984664003EB3A7 /* Development */,
+				3EAAFBDE08984664003EB3A7 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

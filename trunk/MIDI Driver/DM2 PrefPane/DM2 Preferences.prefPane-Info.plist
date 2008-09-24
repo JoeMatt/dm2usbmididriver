@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>DM2 Preferences</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.joemattiello.driver.dm2.prefpanel</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>DM2 Preferences</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.4</string>
+	<key>CFBundleSignature</key>
+	<string>JMTL</string>
+	<key>CFBundleVersion</key>
+	<string>0.4</string>
+	<key>NSMainNibFile</key>
+	<string>DM2_PreferencesPref</string>
+	<key>NSPrefPaneIconFile</key>
+	<string>DM2_PreferencesPref.tiff</string>
+	<key>NSPrefPaneIconLabel</key>
+	<string>DM²</string>
+	<key>NSPrincipalClass</key>
+	<string>DM2_PreferencesPref</string>
+</dict>
+</plist>
