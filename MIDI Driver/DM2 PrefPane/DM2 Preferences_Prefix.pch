@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'DM2 Preferences' target in the 'DM2 Preferences' project.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <AppKit/AppKit.h>
+#endif

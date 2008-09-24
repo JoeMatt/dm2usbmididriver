@@ -1,0 +1,149 @@
+New Features --
+	PRofile labeling with saving, showing status of each function
+	hard coded Traktor mode with template, more adaptive scratching system
+		template have 4 modes, cueing, scratching, looping etc. 
+		scratch ring acts differently depending on which mode
+			can be used as EQ rotaries. Sticky and non-sticky buttons in same preset
+	different fader styles, with margin of error control on outer edges
+
+
+//Possible reasons not working
+
+- coremidi plugin is still alive, can't reopen the interface, get an exclusive access error (will get cannot open interface error, level 4 or 5 in usb prober) Stalled interafce will get passed, won't read or write.
+- endpoint stall, immediate error on any read or write, need clear_endpoint_stall (host side), can use both_ends safely
+- probalby not low-speed bulk
+- possilby call supers closing methds
+- try kill -9 or checking bastard threads still open after midiserver dies.
+
+Lowspeed bulk to the device (endpoint 0x02) - this works
+lowspeed interupt from the device (endpoint 0x81)  - this is broke after retart
+
+TODO::
+	
+	Preferences App:
+		
+		Check that Midi clock preferences do stuff, better yet, disable it for now.
+		Fix - (void)checkIfPluginIsUpToDate:(id)sender
+		
+	Driver:
+		Check MIDI clock in
+		Center button sending master fx in fx mode
+		Better loop control
+		check looping on right deck, set active is weird
+		
+	Other:
+		Look ino Mixxx and DJ 1800 and Virtual DJ and Ableton Live
+		Add mixxx into QTZ file
+
+notes:
+
+---- USB Probe
+
+
+Low Speed device @ 2 (0x3D100000): .............................................   Vendor-specific device from unknown vendor
+    Device Descriptor   
+        Descriptor Version Number:   0x0110
+        Device Class:   255   (Vendor-specific)
+        Device Subclass:   255   (Vendor-specific)
+        Device Protocol:   255
+        Device MaxPacketSize:   8
+        Device VendorID/ProductID:   0x0665/0x0301   (unknown vendor)
+        Device Version Number:   0x0003
+        Number of Configurations:   1
+        Manufacturer String:   0 (none)
+        Product String:   0 (none)
+        Serial Number String:   0 (none)
+    Configuration Descriptor   
+        Length (and contents):   32
+            Raw Descriptor (hex)    0000: 09 02 20 00 01 01 00 80  00 09 04 00 00 02 FF FF  
+            Raw Descriptor (hex)    0010: FF 00 07 05 81 03 08 00  0A 07 05 02 02 08 00 00  
+            Unknown Descriptor   0020: 
+        Number of Interfaces:   1
+        Configuration Value:   1
+        Attributes:   0x80 (bus-powered)
+        MaxPower:   0 ma
+        Interface #0 - Vendor-specific   
+            Alternate Setting   0
+            Number of Endpoints   2
+            Interface Class:   255   (Vendor-specific)
+            Interface Subclass;   255   (Vendor-specific)
+            Interface Protocol:   255
+            Endpoint 0x81 - Interrupt Input   
+                Address:   0x81  (IN)
+                Attributes:   0x03  (Interrupt no synchronization data endpoint)
+                Max Packet Size:   8
+                Polling Interval:   10 ms
+            Endpoint 0x02 - Bulk Output   
+                Address:   0x02  (OUT)
+                Attributes:   0x02  (Bulk no synchronization data endpoint)
+                Max Packet Size:   8
+                Polling Interval:   0 ms
+------
+
+
+
+class newClass : implementingclasses
+
+extern C SampleUSBMIDI::NewSampleUSBMIDIDriver
+	Creates
+	SampleUSBMIDI.cpp::SampleUSBMIDI() 
+		IMPLIMENTS 
+		USBVendorMIDIDriver.cpp::USBVendorMIDIDriver(kFactoryUUID) {start() and Stop() are here as virtual}
+			IMPLIMENTS
+			USBMIDIDriverBase::USBMIDIDriverBase(factoryID),
+			IMPLIMENTS
+			MIDIDriver::MIDIDriver(factoryID)
+				to
+				CFPlugInAddInstanceForFactory(factoryID);
+
+		
+		mDeviceManager(NULL)
+
+
+USB Data Reads are in USBMIDIDevice.cpp in DoRead, async to ReadCallBack in same file, USBMIDIDevice.cpp
+	sends data to HandleInput in same file (USBMIDIDevice.cpp)
+			HandleInput then calls mDriver->HandleInput in my driver (SampleUSBMIDI.cpp), which does nothing and calls, 
+					USBMIDIDriverBase::USBMIDIHandleInput() in USBMIDIDriverBase.cpp
+						this calls MIDIReceived() 
+Writes, same file, DoWrite, and WriteCallBack
+
+
+
+UNUSED CODE
+/*--------------- from HandleInput Input, the old way of copying data from the readBuf and trigoring the notes--*/
+	/*
+		for (int i = 0; i < 8; i++) 
+		{
+			(((UInt8 *)(&status )) )[i+2] = readBuf[i];
+			//This was the old way to check each button. It is pretty math heavy and was only better when the order of checking didn't matter
+			//now that I've added banks, those buttons should be checked first, to change the active bank, and they're not the first ones in
+			//so this system is illogical and inefficiant. 
+			
+			if(  (((uint8_t *)(&oldstatus )) )[i+2] ^ (uint8_t ) readBuf[i]) //if the XOR of the bit of the new and old status is 1, then we need to make a midi note
+			{
+				if(i<4) //We're doing the buttons up here as they are processed, the first 4 bytes, each byte at a time, cycle through the bits
+				{
+					
+					for(int b=0;b < 8;b++)
+					{	
+						//printf("%i vs %i\n",bitCheck( readBuf[i],b) , bitCheck( (((UInt8 *)(&oldstatus )) )[i+2],b) );
+						if(bitCheck( readBuf[i],b) != bitCheck( (((UInt8 *)(&oldstatus )) )[i+2],b) )
+						{
+						
+							noteBuf[0] = bitCheck( readBuf[i],b)  ? (Byte) 0x90 : (Byte) 0x80;         //note on /off
+							noteBuf[1] = baseNote + (i*8) +b; // note number
+							noteBuf[2] = 127;			//velocity
+						
+							pkt = MIDIPacketListAdd(pktlist, sizeof(pbuf), pkt, when, 3, (Byte*)&noteBuf );
+						}
+					}
+				}
+				
+			}
+		}*/
+		
+		
+		
+--Mixxx Linux config
+
+
