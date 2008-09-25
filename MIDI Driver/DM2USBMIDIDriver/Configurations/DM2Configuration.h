@@ -64,6 +64,11 @@
 
 #include <Carbon/Carbon.h>
 
+
+# define makeBasicNotePacket(a,b,c) dm2->noteBuf[0] = a;\
+								dm2->noteBuf[1] = b;\
+								dm2->noteBuf[2] = c;
+
 class DM2USBMIDIDriver;
 
 class DM2Configuration
