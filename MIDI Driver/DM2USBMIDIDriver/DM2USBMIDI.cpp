@@ -894,12 +894,16 @@ ByteCount	DM2USBMIDIDriver::PrepareOutput(USBMIDIDevice *usbmDev, WriteQueue &wr
 	// 
 	Byte *dest = destBuf, *destend = dest + usbmDev->mOutPipe.mMaxPacketSize;
 
+	u_int16_t ledBinary = 0;
+
 	while (!writeQueue.empty()) {		
 		WriteQueue::iterator wqit = writeQueue.begin();
 		WriteQueueElem *wqe = &(*wqit);
 		Byte *dataStart = wqe->packet.Data();
 		Byte *src = dataStart + wqe->bytesSent;
 		Byte *srcend = dataStart + wqe->packet.Length();
+		
+		
 		int srcLeft;
 		
 		//Byte cableNibble = wqe->portNum << 4;
@@ -1014,7 +1018,7 @@ ByteCount	DM2USBMIDIDriver::PrepareOutput(USBMIDIDevice *usbmDev, WriteQueue &wr
 							//*dest++ = c;
 							//*dest++ = 0;
 							//*dest++ = 0;
-							u_int16_t ledBinary = 0;
+							
 							if( CFStringCompare( midiClockResolution, CFSTR("1/4"),0) == 0 )
 							{
 								if(++midiClock % 24 == 0)
