@@ -73,6 +73,7 @@
 		305A755E0C8A94C300D17230 /* move in Resources */ = {isa = PBXBuildFile; fileRef = 305A75590C8A948000D17230 /* move */; };
 		305A756B0C8A955100D17230 /* move.m in Sources */ = {isa = PBXBuildFile; fileRef = 305A756A0C8A955100D17230 /* move.m */; };
 		30636F2C0D9CA04C006B4042 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30636F2B0D9CA04C006B4042 /* AppKit.framework */; };
+		3064E9320E8C17C8002D70DA /* Macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3064E9310E8C17C8002D70DA /* Macros.h */; };
 		307291CB0C49A08E00B5B4D4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 307291CA0C49A08E00B5B4D4 /* Icon.png */; };
 		307D0F8B0C7918030078AAAF /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307D0F7C0C7918030078AAAF /* CoreServices.framework */; };
 		308B9F7C0C4BCA2D00219DF3 /* Read me.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 308B9F7B0C4BCA2D00219DF3 /* Read me.rtfd */; };
@@ -239,6 +240,7 @@
 		305A75590C8A948000D17230 /* move */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = move; sourceTree = BUILT_PRODUCTS_DIR; };
 		305A756A0C8A955100D17230 /* move.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = move.m; path = "DM2 PrefPane/move.m"; sourceTree = "<group>"; };
 		30636F2B0D9CA04C006B4042 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3064E9310E8C17C8002D70DA /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = DM2USBMIDIDriver/Macros.h; sourceTree = "<group>"; };
 		307291CA0C49A08E00B5B4D4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "Release files/Icon.png"; sourceTree = SOURCE_ROOT; };
 		307291E80C49B1A200B5B4D4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "Release files/Icon.png"; sourceTree = "<group>"; };
 		307D0F7C0C7918030078AAAF /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
@@ -514,6 +516,7 @@
 		3098389D0D62898E00EF6F20 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3064E9310E8C17C8002D70DA /* Macros.h */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				3023A8190E89CB5400CE6A81 /* TraktorLoopMode.h in Headers */,
 				3023A81B0E89CB5400CE6A81 /* TraktorMixMode.h in Headers */,
 				3023A81D0E89CB5400CE6A81 /* TraktorModeInterface.h in Headers */,
+				3064E9320E8C17C8002D70DA /* Macros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

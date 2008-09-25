@@ -9,7 +9,7 @@
 
 #include "DM2Configuration.h"
 #include "DM2USBMIDI.h"
-
+#include "Macros.h"
 DM2Configuration::DM2Configuration()
 {
 	bank1 = new struct Bank;
@@ -400,13 +400,13 @@ void DM2Configuration::leftRingSpun(DM2USBMIDIDriver * dm2)
 	dm2->noteBuf[1] = 22;//kNOTE_BASIC_LEFTRINGFORWARD;
 	dm2->noteBuf[2] = accel;
 	dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, dm2->noteBuf );
-#if DEBUG
-	printf("Sending left ring: %x %i %i\n",dm2->noteBuf[0],dm2->noteBuf[1],dm2->noteBuf[2]);
-#endif
+
+	printd("Sending left ring: %x %i %i\n",dm2->noteBuf[0],dm2->noteBuf[1],dm2->noteBuf[2]);
 }
 
 void DM2Configuration::rightRingSpun(DM2USBMIDIDriver * dm2)
 {
+
 /* OLD WAY 	
 	int accel;	
 	Byte * noteBuf = dm2->noteBuf;
