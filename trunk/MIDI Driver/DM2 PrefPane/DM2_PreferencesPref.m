@@ -525,7 +525,7 @@
 		[tabView insertTabViewItem:traktorTab atIndex:1];
 		
 	}		
-	else if([mode isEqualToString:@"Generic MIDI"] || [mode isEqualToString:@"Mixxx"])
+	else if([mode isEqualToString:@"Generic MIDI with Banks"] || [mode isEqualToString:@"Mixxx"] || [mode isEqualToString:@"Generic MIDI"])
 	{
 		if([tabView indexOfTabViewItemWithIdentifier:@"bank1"] != NSNotFound)
 		{
@@ -553,11 +553,11 @@
 			[tabView removeTabViewItem:traktorTab];
 		}		
 		
-		if( [mode isNotEqualTo:@"Mixxx"] )
+		if( [mode isNotEqualTo:@"Mixxx"] && [mode isNotEqualTo:@"Generic MIDI"])
 		{
-		[tabView insertTabViewItem:bank4Tab atIndex:1];
-		[tabView insertTabViewItem:bank3Tab atIndex:1];
-		[tabView insertTabViewItem:bank2Tab atIndex:1];
+			[tabView insertTabViewItem:bank4Tab atIndex:1];
+			[tabView insertTabViewItem:bank3Tab atIndex:1];
+			[tabView insertTabViewItem:bank2Tab atIndex:1];
 		}
 		[tabView insertTabViewItem:bank1Tab atIndex:1];
 	}	
