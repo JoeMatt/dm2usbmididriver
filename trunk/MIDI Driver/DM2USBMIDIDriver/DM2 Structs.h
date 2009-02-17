@@ -12,7 +12,12 @@
 #include <CoreMIDI/CoreMIDI.h>
 
 /*** START TRAKTOR ***/
+#pragma mark -
+#pragma mark Traktor
+#pragma mark -
 	/*** START DECK B ***/
+	#pragma mark Deck B
+	#pragma mark Mix
 	/* Mix */									/* 0 + (n) */
 #define kNOTE_TRAKTOR_DECKB_MIX_PLAY			0	/* Button 1 (0) */   /* Inputable */
 #define kNOTE_TRAKTOR_DECKB_MIX_CUEPLAY			1	/* Button 2 (1) */
@@ -25,7 +30,7 @@
 //#define kNOTE_TRAKTOR_DECKB_MIX_BPMTAP			6	/* NOTHING */
 #define kNOTE_TRAKTOR_DECKB_MIX_CUE				127 /* Bottom B */
 		
-	
+	#pragma mark Loop
 	/* Loop */									/* 16 + (n) */
 #define kNOTE_TRAKTOR_DECKB_LOOP_LENGTHINCREASE	16	/* Button 1 (0) */
 #define kNOTE_TRAKTOR_DECKB_LOOP_LOCK			17	/* Button 2 (1) */	/* Inputable */
@@ -43,7 +48,7 @@
 #define kNOTE_TRAKTOR_DECKB_LOOP_LENGTH4		121 /* B + 4 */
 #define kNOTE_TRAKTOR_DECKA_LOOP_SIZESELECT		60 /* A */
 #define kNOTE_TRAKTOR_DECKB_LOOP_SIZESELECT		61 /* B */
-
+	#pragma mark FX
 	/* FX */									/* 32 + (n) */
 #define kNOTE_TRAKTOR_DECKB_FX_KNOB1RESET		98	/* DblClick Button 8 */
 #define kNOTE_TRAKTOR_DECKB_FX_KNOB2RESET		99	/* DblClick Button 1 */
@@ -59,6 +64,7 @@
 													/* Button 8 (7) */
 #define kNOTE_TRAKTOR_DECKB_FX_SELECTNEXT		85	/* Center */
 #define kNOTE_TRAKTOR_DECKB_FX_CUE				87	/* B */
+	#pragma mark EQ
 	/* EQ */									/* 48 + (n) */
 													/* Button 1 (0) */
 #define kNOTE_TRAKTOR_DECKB_EQ_HIGHKILL			49	/* Button 2 (1) */	/* Inputable */
@@ -74,7 +80,9 @@
 #define kNOTE_TRAKTOR_DECKB_EQ_BALANCERESET		88 /* DblClick Button 1 */
 #define kNOTE_TRAKTOR_DECKB_EQ_VOLUMERESET		89 /* DblClick Button 5 */
 	/*** END DECK B ***/
+	#pragma mark Deck A
 	/*** START DECK A ***/
+	#pragma mark Mix
 	/* Mix */									/* 0 + (n) */
 #define kNOTE_TRAKTOR_DECKA_MIX_PLAY			8	/* Button 1 (8) */	/* Inputable */
 #define kNOTE_TRAKTOR_DECKA_MIX_CUEPLAY			9	/* Button 2 (9) */
@@ -86,7 +94,7 @@
 #define kNOTE_TRAKTOR_DECKA_MIX_CUE_NEXT		15  /* Button 8 (15) */
 //#define kNOTE_TRAKTOR_DECKA_MIX_BPMTAP			7	/* NOTHING  */
 #define kNOTE_TRAKTOR_DECKA_MIX_CUE				126 /*Bottom A */
-
+	#pragma mark Loop
 	/* Loop */									/* 16 + (n) */
 #define kNOTE_TRAKTOR_DECKA_LOOP_LENGTHINCREASE	24	/* Button 1 (8)  */
 #define kNOTE_TRAKTOR_DECKA_LOOP_LOCK			25	/* Button 2 (9)  */
@@ -102,6 +110,7 @@
 #define kNOTE_TRAKTOR_DECKA_LOOP_LENGTH2		116	/* A + 2 */
 #define kNOTE_TRAKTOR_DECKA_LOOP_LENGTH3		118	/* A + 3 */
 #define kNOTE_TRAKTOR_DECKA_LOOP_LENGTH4		120	/* A + 4 */
+	#pragma mark FX
 	/* FX */									/* 32 + (n) */
 #define kNOTE_TRAKTOR_DECKA_FX_KNOB1RESET		102	/* DblClick Button 8 */
 #define kNOTE_TRAKTOR_DECKA_FX_KNOB2RESET		103	/* DblClick Button 1 */
@@ -117,6 +126,7 @@
 													/* Button 8 (15) */
 #define kNOTE_TRAKTOR_DECKA_FX_SELECTNEXT		84	/* Center */
 #define kNOTE_TRAKTOR_DECKA_FX_CUE				86	/* A */
+	#pragma mark EQ
 	/* EQ */									/* 48 + (n) */
 													/* Button 1 (8) */
 #define kNOTE_TRAKTOR_DECKA_EQ_HIGHKILL			57	/* Button 2 (9) */
@@ -132,6 +142,7 @@
 #define kNOTE_TRAKTOR_DECKA_EQ_BALANCERESET		93	/* DblClick Button 1 */
 #define kNOTE_TRAKTOR_DECKA_EQ_VOLUMERESET		94	/* DblClick Button 5 */
 	/*** END DECK A ***/
+	#pragma mark Global
 	/*** Global CC Values ***/
 #define kCC_TRAKTOR_SCRATCH						22
 #define kCC_TRAKTOR_EQ_KNOB						23
@@ -146,8 +157,9 @@
 #define kNOTE_TRAKTOR_GLOBAL_CHANGETO_EQ		55	/* 4 */
 /*** END TRAKTOR ***/
 
-#pragma mark Basic Config
-#define kNOTE_DECKB_ACTIVATESCRATCH				70
+#pragma mark -
+#pragma mark Generic Midi
+#pragma mark -
 
 #define kNOTE_BASIC_STOPBUTTON					64
 #define kNOTE_BASIC_PLAYBUTTON					65
@@ -164,6 +176,12 @@
 #define kNOTE_BASIC_LEFTRINGBACKWARD			75
 #define kNOTE_BASIC_RIGHTRINGFORWARD			78
 #define kNOTE_BASIC_RIGHTRINGBACKWARD			77
+
+#define kNOTE_BASIC_CC_DECKA 22
+#define kNOTE_BASIC_CC_DECKB 22
+#define kNOTE_BASIC_CC_DECKA_CHANNEL 0
+#define kNOTE_BASIC_CC_DECKB_CHANNEL 1
+
 #define kNOTE_BASIC_CC_SLIDER					8
 #define kNOTE_BASIC_CC_JOYSTICKX				12
 #define kNOTE_BASIC_CC_JOYSTICKY				13
@@ -177,7 +195,10 @@
 
 
 /* Mixxx */
+#pragma mark -
 #pragma mark Mixxx
+#pragma mark -
+
 #define kNOTE_MIXXX_LINUX_STOPBUTTON	48
 #define kNOTE_MIXXX_LINUX_PLAYBUTTON	49
 #define kNOTE_MIXXX_LINUX_RECBUTTON		50
