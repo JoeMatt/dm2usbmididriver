@@ -37,7 +37,10 @@
 *   bottom_B 73
 *   bottom_A 74
 *
-*
+*	bottom_1 : 79
+*	bottom_2 : 80
+*	bottom_3 : 81
+*	bottom_4 : 82
  
 	Capabilities:
 		
