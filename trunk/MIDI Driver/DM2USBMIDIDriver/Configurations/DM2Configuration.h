@@ -13,6 +13,10 @@
 *   Joystick X : 12 
 *   Joystick Y : 13
 *
+*	Note: Rings mimic M-Audio Xponent by using same CC # but different Channels
+*	Left Ring	: 0xB0 : 22
+*	Right Ring	: 0xB1 : 22
+*
 *  MIDI NOTES : 0x90/0x80 On/Off
 *
 *  Led Rings : 
@@ -33,14 +37,6 @@
 *   bottom_B 73
 *   bottom_A 74
 *
-*   Scratch Ring Left  : 75/76   Forward/Back
-*   Scratch Ring Right : 77/78
-*   Velocities of 1 to 127
-*
-*   ***Scratch rings send MIDI note off for BOTH notes assigned to it when it stops moving. 
-*	And as of now if a new note is sent from the DM2 with the same velocity, another note on is still sent. 
-*	I'm not sure how the PC version of dm2midi handles this. Does it send new note ons constantly, or does it turn off 
-*	the previous note and send a new note on?
 *
  
 	Capabilities:
