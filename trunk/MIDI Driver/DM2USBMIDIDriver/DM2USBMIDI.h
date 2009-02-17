@@ -41,6 +41,7 @@
 #define kDoubleClickTime -150000
 
 class DM2Configuration;
+class DM2BasicNoBanks;
 class MixxxConfiguration;
 class TraktorConfiguration;
 
@@ -151,7 +152,8 @@ public:
 	void show(CFStringRef, ...);
 	
 	DM2Configuration * currentConfig;
-	DM2Configuration * genericConfig;
+	DM2Configuration * genericConfigWithBanks;
+	DM2BasicNoBanks * genericConfigNoBanks;
 	MixxxConfiguration * mixxxConfig;
 	TraktorConfiguration * traktorConfig;
 };

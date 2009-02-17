@@ -19,12 +19,12 @@
 #define __MixxxConfiguration_h__
 
 #include <Carbon/Carbon.h>
-#include "DM2Configuration.h"
+#include "DM2BasicBanks.h"
 
 class DM2USBMIDIDriver;
-class DM2Configuration;
+class DM2BasicNoBanks;
 
-class MixxxConfiguration : public DM2Configuration {
+class MixxxConfiguration : public DM2BasicNoBanks {
 public:
 	MixxxConfiguration();
 	

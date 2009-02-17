@@ -49,6 +49,7 @@ Maybes::
 #include "DM2Configuration.h"
 #include "MixxxConfiguration.h"
 #include "TraktorConfiguration.h"
+#include "DM2BasicBanks.h"
 #include <unistd.h> //usleep
 #include <time.h> //nanosleep
 
@@ -87,11 +88,12 @@ DM2USBMIDIDriver::DM2USBMIDIDriver() :
 		resetCalibration();
 		softwareMode = CFSTR("Generic MIDI");
 		
-		genericConfig = new DM2Configuration();
-		mixxxConfig = new MixxxConfiguration();
-		traktorConfig = new TraktorConfiguration();
+		genericConfigWithBanks	= new DM2Configuration();
+		genericConfigNoBanks	= new DM2BasicNoBanks();
+		mixxxConfig				= new MixxxConfiguration();
+		traktorConfig			= new TraktorConfiguration();
 
-		currentConfig = genericConfig;
+		currentConfig = genericConfigNoBanks;
 }
 
 DM2USBMIDIDriver::~DM2USBMIDIDriver()
@@ -796,8 +798,10 @@ void DM2USBMIDIDriver::readSettings()
 		currentConfig = mixxxConfig;
 	else if(CFStringCompare(softwareMode, CFSTR("Traktor"),0) == 0)
 		currentConfig = traktorConfig;
+	else if(CFStringCompare(softwareMode, CFSTR("Generic MIDI with Banks"),0) == 0)
+		currentConfig = genericConfigWithBanks;
 	else
-		currentConfig = genericConfig;
+		currentConfig = genericConfigNoBanks;
 	
 	/** MIDI Clock Resolution */
 	rtn = CFPreferencesCopyAppValue( CFSTR("midiClockResolution"), appID );
