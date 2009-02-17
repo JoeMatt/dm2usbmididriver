@@ -396,8 +396,8 @@ void DM2Configuration::leftRingSpun(DM2USBMIDIDriver * dm2)
 	if( (accel - currentBank->bumpIgnore) <= 0 && accel != 64)
 		return;
 	//Note CC 22, channel 1
-	dm2->noteBuf[0] = 0xB0;
-	dm2->noteBuf[1] = 22;//kNOTE_BASIC_LEFTRINGFORWARD;
+	dm2->noteBuf[0] = 0xB0 + kNOTE_BASIC_CC_DECKA_CHANNEL;
+	dm2->noteBuf[1] = kNOTE_BASIC_CC_DECKA;//kNOTE_BASIC_LEFTRINGFORWARD;
 	dm2->noteBuf[2] = accel;
 	dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, dm2->noteBuf );
 
@@ -458,8 +458,8 @@ void DM2Configuration::rightRingSpun(DM2USBMIDIDriver * dm2)
 	if( (accel - currentBank->bumpIgnore) <= 0 && accel != 64)
 		return;
 	//Note CC 22, channel 1
-	dm2->noteBuf[0] = 0xB1;
-	dm2->noteBuf[1] = 22;//kNOTE_BASIC_RIGHTRINGFORWARD;
+	dm2->noteBuf[0] = 0xB0 + kNOTE_BASIC_CC_DECKB_CHANNEL;
+	dm2->noteBuf[1] = kNOTE_BASIC_CC_DECKB; //kNOTE_BASIC_RIGHTRINGFORWARD;
 	dm2->noteBuf[2] = accel;
 	dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, dm2->noteBuf );
 #if DEBUG
