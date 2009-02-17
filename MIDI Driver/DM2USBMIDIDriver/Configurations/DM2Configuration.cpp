@@ -953,21 +953,22 @@ void DM2Configuration::readSettings()
 	
 	rtn = CFPreferencesCopyAppValue( CFSTR("bank2ScratchRingBumpIgnore"), appID );
 	if(rtn != NULL)
-		CFNumberGetValue( (CFNumberRef) rtn, kCFNumberIntType, &(bank1->bumpIgnore));
+		CFNumberGetValue( (CFNumberRef) rtn, kCFNumberIntType, &(bank2->bumpIgnore));
 	else
 		bank2->bumpIgnore = 0;
 	
 	rtn = CFPreferencesCopyAppValue( CFSTR("bank3ScratchRingBumpIgnore"), appID );
 	if(rtn != NULL)
-		CFNumberGetValue( (CFNumberRef) rtn, kCFNumberIntType, &(bank1->bumpIgnore));
+		CFNumberGetValue( (CFNumberRef) rtn, kCFNumberIntType, &(bank3->bumpIgnore));
 	else
 		bank3->bumpIgnore = 0;
 	
 	rtn = CFPreferencesCopyAppValue( CFSTR("bank4ScratchRingBumpIgnore"), appID );
 	if(rtn != NULL)
-		CFNumberGetValue( (CFNumberRef) rtn, kCFNumberIntType, &(bank1->bumpIgnore));
+		CFNumberGetValue( (CFNumberRef) rtn, kCFNumberIntType, &(bank4->bumpIgnore));
 	else
 		bank4->bumpIgnore = 0;
+	
 	/* Who Controls LEDs */
 	rtn = CFPreferencesCopyAppValue( CFSTR("bank1WhoControlsLEDs"), appID );
 	if(rtn != NULL)

@@ -13,15 +13,10 @@
 #include "DM2USBMIDI.h"
 #include "DM2 Structs.h"
 
-MixxxConfiguration::MixxxConfiguration() : DM2Configuration(), leftRingCCValue(kNOTE_MIXXX_LINUX_CC_DECKA), rightRingCCValue(kNOTE_MIXXX_LINUX_CC_DECKB),
+MixxxConfiguration::MixxxConfiguration() : DM2BasicNoBanks(), leftRingCCValue(kNOTE_MIXXX_LINUX_CC_DECKA), rightRingCCValue(kNOTE_MIXXX_LINUX_CC_DECKB),
 middleLeftRingMoved(FALSE), middleRightRingMoved(FALSE), led8LeftRingMoved(FALSE), led8RightRingMoved(FALSE), led7LeftRingMoved(FALSE), led7RightRingMoved(FALSE),
 led6LeftRingMoved(FALSE), led6RightRingMoved(FALSE), led3LeftRingMoved(FALSE), led3RightRingMoved(FALSE), led2LeftRingMoved(FALSE), led2RightRingMoved(FALSE), jogmidival(64)
 {	
-	/* Delete unused Bank structs */
-	delete bank2;
-	delete bank3;
-	delete bank4;
-	
 	/* TODO: Some of the following can probably be deleted. Non toggle buttons, maybe leds as well */
 	bank1->leds.right_1 = OFF;
 	bank1->leds.right_2 = OFF;
