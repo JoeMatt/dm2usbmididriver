@@ -155,13 +155,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		300F90480D6A11C1007A4B15 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = /Users/lounger/Library/PreferencePanes;
+			buildActionMask = 8;
+			dstPath = $HOME/Library/PreferencePanes;
 			dstSubfolderSpec = 0;
 			files = (
 				300F904E0D6A11EB007A4B15 /* DM2 Preferences.prefPane in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		301748F40C7CA25C0059B6B3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
