@@ -1,55 +1,51 @@
-/*	Copyright: 	© Copyright 2005 Apple Computer, Inc. All rights reserved.
-
-	Disclaimer:	IMPORTANT:  This Apple software is supplied to you by Apple Computer, Inc.
-			("Apple") in consideration of your agreement to the following terms, and your
-			use, installation, modification or redistribution of this Apple software
-			constitutes acceptance of these terms.  If you do not agree with these terms,
-			please do not use, install, modify or redistribute this Apple software.
-
-			In consideration of your agreement to abide by the following terms, and subject
-			to these terms, Apple grants you a personal, non-exclusive license, under Apple’s
-			copyrights in this original Apple software (the "Apple Software"), to use,
-			reproduce, modify and redistribute the Apple Software, with or without
-			modifications, in source and/or binary forms; provided that if you redistribute
-			the Apple Software in its entirety and without modifications, you must retain
-			this notice and the following text and disclaimers in all such redistributions of
-			the Apple Software.  Neither the name, trademarks, service marks or logos of
-			Apple Computer, Inc. may be used to endorse or promote products derived from the
-			Apple Software without specific prior written permission from Apple.  Except as
-			expressly stated in this notice, no other rights or licenses, express or implied,
-			are granted by Apple herein, including but not limited to any patent rights that
-			may be infringed by your derivative works or by other works in which the Apple
-			Software may be incorporated.
-
-			The Apple Software is provided by Apple on an "AS IS" basis.  APPLE MAKES NO
-			WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED
-			WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR
-			PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN
-			COMBINATION WITH YOUR PRODUCTS.
-
-			IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR
-			CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
-			GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-			ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION
-			OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT
-			(INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN
-			ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
-/*=============================================================================
-	USBMIDIDevice.cpp
+/*	Copyright © 2007 Apple Inc. All Rights Reserved.
 	
-=============================================================================*/
-
+	Disclaimer: IMPORTANT:  This Apple software is supplied to you by 
+			Apple Inc. ("Apple") in consideration of your agreement to the
+			following terms, and your use, installation, modification or
+			redistribution of this Apple software constitutes acceptance of these
+			terms.  If you do not agree with these terms, please do not use,
+			install, modify or redistribute this Apple software.
+			
+			In consideration of your agreement to abide by the following terms, and
+			subject to these terms, Apple grants you a personal, non-exclusive
+			license, under Apple's copyrights in this original Apple software (the
+			"Apple Software"), to use, reproduce, modify and redistribute the Apple
+			Software, with or without modifications, in source and/or binary forms;
+			provided that if you redistribute the Apple Software in its entirety and
+			without modifications, you must retain this notice and the following
+			text and disclaimers in all such redistributions of the Apple Software. 
+			Neither the name, trademarks, service marks or logos of Apple Inc. 
+			may be used to endorse or promote products derived from the Apple
+			Software without specific prior written permission from Apple.  Except
+			as expressly stated in this notice, no other rights or licenses, express
+			or implied, are granted by Apple herein, including but not limited to
+			any patent rights that may be infringed by your derivative works or by
+			other works in which the Apple Software may be incorporated.
+			
+			The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
+			MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+			THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
+			FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
+			OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+			
+			IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
+			OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+			SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+			INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
+			MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
+			AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
+			STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
+			POSSIBILITY OF SUCH DAMAGE.
+*/
 #include "USBMIDIDevice.h"
 #include "USBMIDIDriverBase.h"
-#include <mach/mach.h>
-
 
 #if DEBUG
-	#define DUMP_OUTPUT 1
+	//#define DUMP_OUTPUT 1
 	//#define DUMP_INPUT 1
-	#define VERBOSE 1
-	#define TRACE_IO 1
+	//#define VERBOSE 1
+	//#define TRACE_IO 1
 #endif
 
 
@@ -122,6 +118,9 @@ bool	USBMIDIDevice::Initialize()
 		}
 		
 #if COALESCE_WRITES
+		mWriteSignalTimer = MIDITimerTaskCreate(WriteSignalCallback, this);
+#endif
+#if 0
 		{
 			CFRunLoopTimerContext context;
 			context.version = 0;
@@ -198,13 +197,17 @@ USBMIDIDevice::~USBMIDIDevice()
 	CFRunLoopRef ioRunLoop = MIDIGetDriverIORunLoop();
 	CFRunLoopSourceRef source;
 	
-	if (ioRunLoop != NULL) {
+	if (mUSBIntfIntf != NULL && ioRunLoop != NULL) {
 		source = (*mUSBIntfIntf)->GetInterfaceAsyncEventSource(mUSBIntfIntf);
 		if (source != NULL && CFRunLoopContainsSource(ioRunLoop, source, kCFRunLoopDefaultMode))
 			CFRunLoopRemoveSource(ioRunLoop, source, kCFRunLoopDefaultMode);
 	}
 	
 #if COALESCE_WRITES
+	if (mWriteSignalTimer != NULL)
+		MIDITimerTaskDispose(mWriteSignalTimer);
+#endif
+#if 0
 	if (mWriteSignalTimer != NULL) {
 		CFRunLoopRemoveTimer(ioRunLoop, mWriteSignalTimer, kCFRunLoopDefaultMode);
 		CFRunLoopTimerInvalidate(mWriteSignalTimer);
@@ -303,7 +306,8 @@ void	USBMIDIDevice::Send(const MIDIPacketList *pktlist, int portNumber)
 #if COALESCE_WRITES
 		if (!mWriteBuf[mCurWriteBuf].IOPending() && !mWriteSignalled) {
 			mWriteSignalled = 1;
-			CFRunLoopTimerSetNextFireDate(mWriteSignalTimer, CFAbsoluteTimeGetCurrent());
+			//CFRunLoopTimerSetNextFireDate(mWriteSignalTimer, CFAbsoluteTimeGetCurrent());
+			MIDITimerTaskSetNextWakeTime(mWriteSignalTimer, CAHostTimeBase::GetCurrentTime() + CAHostTimeBase::ConvertFromNanos(300000ULL));	// 300 us from now
 		}
 #else
 		if (!mWriteBuf[mCurWriteBuf].IOPending())
@@ -365,6 +369,8 @@ void	USBMIDIDevice::DoWrite()
 #if TRACE_IO
 			Byte *p = writeBuffer;
 			syscall(180, 0xBC240000, msglen, *(UInt32 *)p, *(UInt32 *)(p + 4), *(UInt32 *)(p + 8));
+			if (msglen > 12)
+				syscall(180, 0xBC240000, *(UInt32 *)(p + 12), *(UInt32 *)(p + 16), *(UInt32 *)(p + 20));
 #endif
 #if DUMP_OUTPUT
 			Dump("OUT", writeBuffer, msglen);
@@ -398,7 +404,7 @@ void	USBMIDIDevice::WriteCallback(void *refcon, IOReturn asyncWriteResult, void 
 //	USBMIDIDevice::WriteSignalCallback
 //
 //	Runloop timer fired
-void	USBMIDIDevice::WriteSignalCallback(CFRunLoopTimerRef timer, void *info)
+void	USBMIDIDevice::WriteSignalCallback(void *info)
 {
 	USBMIDIDevice *self = (USBMIDIDevice *)info;
 	CAMutex::Locker lock(self->mWriteQueueMutex);

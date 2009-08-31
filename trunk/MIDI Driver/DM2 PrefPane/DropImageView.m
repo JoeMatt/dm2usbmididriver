@@ -10,6 +10,8 @@
 #import "Carbon/Carbon.h"
 #import "NSStringAdditions.h"
 
+#include <dlfcn.h>	//Provides dynamic framework linking
+
 @implementation DropImageView
 
 /* <Alloc/De-alloc> */
@@ -54,12 +56,13 @@
     if ((NSDragOperationGeneric & [sender draggingSourceOperationMask]) 
 		== NSDragOperationGeneric)
     {
-        //this means that the sender is offering the type of operation we want
+		//this means that the sender is offering the type of operation we want
         //return that we want the NSDragOperationGeneric operation that they 
 		//are offering
-		SetThemeCursor(1);
+		
+		[self setDraggingCursor:YES];
 
-        return NSDragOperationGeneric;
+		return NSDragOperationGeneric;
     }
     else
     {
@@ -69,11 +72,54 @@
     }
 }
 
+
+-(void)setDraggingCursor:(BOOL)onOrOff
+{
+			// Code to detect Snow Leopard, which removers carbon, but finally
+		// adds cocoa support for the + sign cursor
+		SInt32 MacVersion;
+		Gestalt(gestaltSystemVersion, &MacVersion);
+		
+		if(MacVersion >= 0x1060)
+		{
+			if(onOrOff)
+				[(NSCursor*)[NSCursor performSelector:@selector(dragCopyCursor)] set];
+			else
+				[[NSCursor arrowCursor] set];
+
+		}
+		else
+		{
+			// Load Carbon.framework, bcs we can't link against it directly any more.
+			
+			static NSBundle * Carbon = nil;
+			
+			if(!Carbon)
+				Carbon = [NSBundle bundleWithIdentifier:@"com.apple.Carbon"];
+			if(!Carbon)
+				Carbon = [NSBundle bundleWithPath:@"/System/Library/Frameworks/Carbon.framework"];
+
+			if( Carbon && ([Carbon isLoaded] || [Carbon load]))
+			{
+				void *carbon =  dlopen("/System/Library/Frameworks/Carbon.framework/Carbon",   
+					RTLD_LAZY);
+
+				OSStatus (*setThemeCursor)(ThemeCursor inCursor) = dlsym(carbon, "SetThemeCursor");
+				setThemeCursor(onOrOff);
+			}
+			else 
+			{
+				NSLog(@"Could not load Carbon.framework");
+			}
+
+		}
+}
+
 - (void)draggingExited:(id <NSDraggingInfo>)sender
 {
     //we aren't particularily interested in this so we will do nothing
     //this is one of the methods that we do not have to implement
-	SetThemeCursor(0);
+	[self setDraggingCursor:NO];
 }
 
 - (NSDragOperation)draggingUpdated:(id <NSDraggingInfo>)sender
@@ -110,7 +156,7 @@
 - (void)concludeDragOperation:(id <NSDraggingInfo>)sender
 {
     //re-draw the view with our new data
-	SetThemeCursor(0);
+	[self setDraggingCursor:NO];
     [self setNeedsDisplay:YES];
 }
 

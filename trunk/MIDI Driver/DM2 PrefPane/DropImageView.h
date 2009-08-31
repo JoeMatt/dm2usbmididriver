@@ -25,5 +25,6 @@
 - (NSString *)licenseXMLString;
 - (void)registrationValid;
 
+-(void)setDraggingCursor:(BOOL)onOrOff;
 @end
  

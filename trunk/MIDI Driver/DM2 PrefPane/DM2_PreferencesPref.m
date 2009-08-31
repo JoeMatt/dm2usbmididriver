@@ -576,7 +576,8 @@
 		}
 		/* Load the Quartz framework on 10.4+ */
 		NSBundle * quartz = [NSBundle bundleWithIdentifier:@"com.apple.quartzframework"];
-		quartz = [NSBundle bundleWithPath:@"/System/Library/Frameworks/Quartz.framework"];
+		if(!quartz)
+			quartz = [NSBundle bundleWithPath:@"/System/Library/Frameworks/Quartz.framework"];
 
 		if( [quartz isLoaded] )
 			NSLog(@"Quartz already loaded");
