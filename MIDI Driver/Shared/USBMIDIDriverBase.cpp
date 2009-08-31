@@ -1,45 +1,43 @@
-/*	Copyright: 	© Copyright 2005 Apple Computer, Inc. All rights reserved.
-
-	Disclaimer:	IMPORTANT:  This Apple software is supplied to you by Apple Computer, Inc.
-			("Apple") in consideration of your agreement to the following terms, and your
-			use, installation, modification or redistribution of this Apple software
-			constitutes acceptance of these terms.  If you do not agree with these terms,
-			please do not use, install, modify or redistribute this Apple software.
-
-			In consideration of your agreement to abide by the following terms, and subject
-			to these terms, Apple grants you a personal, non-exclusive license, under Apple’s
-			copyrights in this original Apple software (the "Apple Software"), to use,
-			reproduce, modify and redistribute the Apple Software, with or without
-			modifications, in source and/or binary forms; provided that if you redistribute
-			the Apple Software in its entirety and without modifications, you must retain
-			this notice and the following text and disclaimers in all such redistributions of
-			the Apple Software.  Neither the name, trademarks, service marks or logos of
-			Apple Computer, Inc. may be used to endorse or promote products derived from the
-			Apple Software without specific prior written permission from Apple.  Except as
-			expressly stated in this notice, no other rights or licenses, express or implied,
-			are granted by Apple herein, including but not limited to any patent rights that
-			may be infringed by your derivative works or by other works in which the Apple
-			Software may be incorporated.
-
-			The Apple Software is provided by Apple on an "AS IS" basis.  APPLE MAKES NO
-			WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED
-			WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR
-			PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN
-			COMBINATION WITH YOUR PRODUCTS.
-
-			IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR
-			CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
-			GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-			ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION
-			OF THE APPLE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT
-			(INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN
-			ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
-/*=============================================================================
-	USBMIDIDriverBase.cpp
+/*	Copyright © 2007 Apple Inc. All Rights Reserved.
 	
-=============================================================================*/
-
+	Disclaimer: IMPORTANT:  This Apple software is supplied to you by 
+			Apple Inc. ("Apple") in consideration of your agreement to the
+			following terms, and your use, installation, modification or
+			redistribution of this Apple software constitutes acceptance of these
+			terms.  If you do not agree with these terms, please do not use,
+			install, modify or redistribute this Apple software.
+			
+			In consideration of your agreement to abide by the following terms, and
+			subject to these terms, Apple grants you a personal, non-exclusive
+			license, under Apple's copyrights in this original Apple software (the
+			"Apple Software"), to use, reproduce, modify and redistribute the Apple
+			Software, with or without modifications, in source and/or binary forms;
+			provided that if you redistribute the Apple Software in its entirety and
+			without modifications, you must retain this notice and the following
+			text and disclaimers in all such redistributions of the Apple Software. 
+			Neither the name, trademarks, service marks or logos of Apple Inc. 
+			may be used to endorse or promote products derived from the Apple
+			Software without specific prior written permission from Apple.  Except
+			as expressly stated in this notice, no other rights or licenses, express
+			or implied, are granted by Apple herein, including but not limited to
+			any patent rights that may be infringed by your derivative works or by
+			other works in which the Apple Software may be incorporated.
+			
+			The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
+			MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+			THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
+			FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
+			OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+			
+			IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
+			OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+			SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+			INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
+			MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
+			AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
+			STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
+			POSSIBILITY OF SUCH DAMAGE.
+*/
 #include "USBMIDIDriverBase.h"
 #include <algorithm>
 #include "USBMIDIDevice.h"
@@ -50,10 +48,10 @@
 
 #if DEBUG
 	#include <stdio.h>
-	#define VERBOSE 1
+	//#define VERBOSE 1
 	
 	// sysex debug levels
-	#define SYSEX_DEBUG_LEVEL 2
+	//#define SYSEX_DEBUG_LEVEL 2
 	
 	#if SYSEX_DEBUG_LEVEL >= 1
 		static int gSysExCount = -1;
@@ -93,8 +91,11 @@ OSStatus	USBMIDIDriverBase::Send(const MIDIPacketList *pktlist, void *endptRef1,
 	USBMIDIDevice *usbmDev = (USBMIDIDevice *)endptRef1;
 	if (usbmDev == NULL) return kMIDIUnknownEndpoint;
 
+	# if __WORDSIZE == 64
+	usbmDev->Send(pktlist, (long)endptRef2);	// endptRef2 = port number
+	#else
 	usbmDev->Send(pktlist, (int)endptRef2);	// endptRef2 = port number
-
+	#endif
 	return noErr;
 }
 
@@ -116,10 +117,8 @@ void	USBMIDIDriverBase::USBMIDIHandleInput(	USBMIDIDevice *	usbmDev,
 	bool insysex = false;
 
 	for ( ; src < srcend; src += 4) {
-		int cin = src[0] >> 4;//& 0x0F;
-#if DEBUG
-		//printf("----CIN:%x ,src%i\n",cin,src[2]);
-#endif
+		int cin = src[0] & 0x0F;
+		
 		if (cin < 2)
 			// skip over reserved cin's before doing any more work
 			continue;
@@ -142,9 +141,7 @@ void	USBMIDIDriverBase::USBMIDIHandleInput(	USBMIDIDevice *	usbmDev,
 			if (gSysExTraceCount >= 0)
 				gSysExTraceBuf[gSysExTraceCount++] = *(UInt32 *)src;
 		#endif
-			
 
-			
 		switch (cin) {
 		case 0x0:		// reserved
 		case 0x1:		// reserved
@@ -153,8 +150,7 @@ void	USBMIDIDriverBase::USBMIDIHandleInput(	USBMIDIDevice *	usbmDev,
 			msglen = 1;
 AddMessage:
 			while (true) {
-
-				pkt = MIDIPacketListAdd(pktlist, sizeof(pbuf), pkt, when, msglen, src ); //was src + 1
+				pkt = MIDIPacketListAdd(pktlist, sizeof(pbuf), pkt, when, msglen, src + 1);
 				if (pkt != NULL) break;
 				if (prevCable != -1)
 					MIDIReceived(usbmDev->mSources[prevCable], pktlist);
@@ -229,7 +225,7 @@ AddSysEx:
 							if (gSysExTraceBuf[i] == 0)
 								fprintf(f, "\n");
 							else
-								fprintf(f, "%08x\n", (unsigned) gSysExTraceBuf[i]);
+								fprintf(f, "%08x\n", gSysExTraceBuf[i]);
 						}
 						fclose(f);
 						gSysExTraceCount = -1;
@@ -248,7 +244,6 @@ AddSysEx:
 			goto AddMessage;
 		}
 	}
-	
 	#if SYSEX_DEBUG_LEVEL >= 2
 		gSysExTraceBuf[gSysExTraceCount++] = 0;
 		//syscall(180, 0xd0000000 + (src - readBuf), src-readBuf, 0, 0, 0);

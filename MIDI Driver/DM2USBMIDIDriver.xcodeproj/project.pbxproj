@@ -86,7 +86,6 @@
 		3092D4DC0C4B36AA003A3062 /* Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 3092D4DA0C4B36AA003A3062 /* Update.m */; };
 		3098391E0D6341A000EF6F20 /* DropImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3098391C0D6341A000EF6F20 /* DropImageView.h */; };
 		3098391F0D6341A000EF6F20 /* DropImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3098391D0D6341A000EF6F20 /* DropImageView.m */; };
-		309839990D637F3100EF6F20 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309839980D637F3100EF6F20 /* Carbon.framework */; };
 		30A21A6D0C5E8D5B002EF13D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301A35730C14CF87007B58B5 /* Foundation.framework */; };
 		30A21CB30C6182A7002EF13D /* DM2 Structs.h in Headers */ = {isa = PBXBuildFile; fileRef = 30A21CB20C6182A7002EF13D /* DM2 Structs.h */; };
 		3EB3AB3F079D51BB0046E3F3 /* IOServiceClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F509F4D90177994001CA2136 /* IOServiceClient.h */; };
@@ -119,6 +118,7 @@
 		3EB3AB5E079D51BB0046E3F3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
 		3EB3AB5F079D51BB0046E3F3 /* CoreMIDIServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5706D20014B0B17015B338A /* CoreMIDIServer.framework */; };
 		3EB3AB60079D51BB0046E3F3 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5706D23014B0BC6015B338A /* IOKit.framework */; };
+		B32956FB104C4A3F000C5C3E /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32956FA104C4A3F000C5C3E /* CoreMIDI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,6 +262,7 @@
 		30E772320C032986003A8664 /* dm2_old.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = dm2_old.cpp; sourceTree = "<group>"; };
 		30E772330C032986003A8664 /* dm2_old.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = dm2_old.h; sourceTree = "<group>"; };
 		3EB3AB62079D51BB0046E3F3 /* Info-DM2USBMIDIDriver.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-DM2USBMIDIDriver.plist"; sourceTree = "<group>"; };
+		B32956FA104C4A3F000C5C3E /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		F490F210C5B03DDB00A007D0 /* CAHostTimeBase.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CAHostTimeBase.cpp; sourceTree = "<group>"; };
 		F490F211C5B03DDB00A007D0 /* CAHostTimeBase.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CAHostTimeBase.h; sourceTree = "<group>"; };
 		F490F214C5B03DDB00A007D0 /* CAMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CAMutex.cpp; sourceTree = "<group>"; };
@@ -308,7 +309,6 @@
 				305A73DA0C8A6BA800D17230 /* Security.framework in Frameworks */,
 				305A74C80C8A76E900D17230 /* Foundation.framework in Frameworks */,
 				305A74CD0C8A770300D17230 /* CoreFoundation.framework in Frameworks */,
-				309839990D637F3100EF6F20 /* Carbon.framework in Frameworks */,
 				309175F00D69EDC900272464 /* ApplicationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +340,7 @@
 				307D0F8B0C7918030078AAAF /* CoreServices.framework in Frameworks */,
 				309127440C9E08CB00BA3923 /* Growl.framework in Frameworks */,
 				30636F2C0D9CA04C006B4042 /* AppKit.framework in Frameworks */,
+				B32956FB104C4A3F000C5C3E /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +357,7 @@
 				3098389D0D62898E00EF6F20 /* Shared */,
 				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
 				19C28FB6FE9D52B211CA2CBB /* Products */,
+				B32956FA104C4A3F000C5C3E /* CoreMIDI.framework */,
 			);
 			name = MIDIDrivers;
 			sourceTree = "<group>";
@@ -536,8 +538,8 @@
 				F490F215C5B03DDB00A007D0 /* CAMutex.h */,
 			);
 			name = PublicUtility;
-			path = /Developer/Examples/CoreAudio/PublicUtility;
-			sourceTree = "<absolute>";
+			path = Extras/CoreAudio/PublicUtility;
+			sourceTree = DEVELOPER_DIR;
 		};
 		F509F4D40177994001CA2136 /* External Source */ = {
 			isa = PBXGroup;
@@ -630,9 +632,9 @@
 				3EB3AB47079D51BB0046E3F3 /* USBMIDIDeviceManager.h in Headers */,
 				3EB3AB48079D51BB0046E3F3 /* USBMIDIDriverBase.h in Headers */,
 				3EB3AB49079D51BB0046E3F3 /* USBVendorMIDIDriver.h in Headers */,
-				3EB3AB4A079D51BB0046E3F3 /* DM2USBMIDI.h in Headers */,
 				3EB3AB4B079D51BB0046E3F3 /* CAHostTimeBase.h in Headers */,
 				3EB3AB4C079D51BB0046E3F3 /* CAMutex.h in Headers */,
+				3EB3AB4A079D51BB0046E3F3 /* DM2USBMIDI.h in Headers */,
 				3023A80C0E89CB5400CE6A81 /* DM2Configuration.h in Headers */,
 				3023A8100E89CB5400CE6A81 /* MixxxConfiguration.h in Headers */,
 				3023A8120E89CB5400CE6A81 /* TraktorConfiguration.h in Headers */,
@@ -810,7 +812,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /usr/bin/perl;
-			shellScript = "# /usr/bin/perl -w\n#\n# Last updated: 21MAR06, Andy O'Meara and Rob Barris\n#\n# This is an Xcode post-build phase script for devs who sleep better at night knowing\n#    that their deployment binaries are as stripped as possible.  This makes life more difficult\n#    for a hacker/cracker to locate sensitive code to trace, study, and/or extract.\n#\n# This script will execute only if the Xcode \"Deployment Postprocessing\" setting\n#    is set (aka DEPLOYMENT_POSTPROCESSING).\n#\n# The downside to shipping a stripped binary is that your user's crash reports\n#    will be useless unless you have a link map to convert code offsets (from a stack trace)\n#    into proc names.  To address this, this script moves your pre-stripped executable\n#    to the build dir, appending \"_full\" to the filename, allowing you to retain it for\n#    the day you need it in order to decipher a stack trace.  You do this by using 'atos'\n#    with the original generated binary (type 'man atos' for info).\n#\n# Recommended Xcode build settings:\n#    Dead Code Stripping                  YES\n#    Only Link In Essential Symbols       NO\n#    Deployment Postprocessing            YES (this activates this script)\n#    Strip Linked Product                 NO\n#    Use Separate Strip                   NO\n#    Strip Style                          All Symbols\n#    Strip Debug Symbols During Copy      NO\n#    Preserve Private External Symbols    NO\n#    Separate PCH Symbols                 YES\n#    Symbols Hidden By Default            YES (Critical!)\n#    Inline Functions Hidden              YES\n#\n# Note that if you're building a dynamic library, you'll need to explicitly\n#    declare any symbols that you want to be exported.  See the following:\n#    file:///Developer/ADC%20Reference%20Library/documentation/DeveloperTools/Conceptual/CppRuntimeEnv/Articles/SymbolVisibility.html\n#\n\nuse strict;\n\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n#exit 0;\n# This script is activated via an Xcode env flag.\nif ( $ENV{DEPLOYMENT_POSTPROCESSING} ne \"YES\" ) {\n\tgoto seticon;\n   exit 0;\n}\n\nprint \"\\n\\n==================== Commencing external stripping phase...\\n\";\n   \nmy $PLUGIN\t   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}\";     \nmy $BINARY       = \"$PLUGIN/Contents/MacOS/$ENV{EXECUTABLE_NAME}\";\nmy $BINARY_FULL  = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{EXECUTABLE_NAME}_full\";\nmy $BINARY_i386  = \"${BINARY}_i386\";\nmy $BINARY_x86_64  = \"${BINARY}_x86_64\";\nmy $BINARY_ppc   = \"${BINARY}_ppc\";\nmy $RELEASEDIR   = \"$ENV{SRCROOT}/Release Files\";\n       \n# Extract each arch into a \"thin\" binary for stripping\n`lipo \"$BINARY\" -thin ppc7400 -output \"$BINARY_ppc\" `;\n`lipo \"$BINARY\" -thin i386 -output \"$BINARY_i386\"`;\n`lipo \"$BINARY\" -thin x86_64 -output \"$BINARY_x86_64\"`;\n\n# Retain the orignal binary for QA and use with the util 'atos'\n`mv -f \"$BINARY\" \"$BINARY_FULL\"`;\n\n# Perform desired stripping on each thin binary.  \n`strip -S -x -o \"${BINARY_ppc}_tmp\"  -r \"$BINARY_ppc\" `;\n`strip -S -x -o \"${BINARY_i386}_tmp\" -r \"$BINARY_i386\"`;\n`strip -S -x -o \"${BINARY_x86_64}_tmp\" -r \"$BINARY_x86_64\"`;\n\n# We're now done with the original thin binaries, so chuck them.\n`rm -f \"$BINARY_ppc\" `;\n`rm -f \"$BINARY_i386\"`;\n`rm -f \"$BINARY_x86_64\"`;\n\n# Make the new universal binary from our stripped thin pieces.\n`lipo -arch i386 \"${BINARY_i386}_tmp\" -arch ppc7400 \"${BINARY_ppc}_tmp\" -arch x86_64 \"${BINARY_x86_64}_tmp\" -create -output \"$BINARY\"`;\n\n# We're now done with the temp thin binaries, so chuck them.\n`rm -f \"${BINARY_ppc}_tmp\"`;\n`rm -f \"${BINARY_i386}_tmp\"`;\n`rm -f \"${BINARY_x86_64}_tmp\"`;\n\nprint \"\\n==================== External strip phase complete\\n\";\nseticon:\nprint \"==Set icon\\n\";\n`\"$ENV{SRCROOT}/Other/seticon\" -d \"$RELEASEDIR/../PrefpaneIcon.icns\" \"$PLUGIN\"`;\n`\"$ENV{SRCROOT}/Other/seticon\" \"$RELEASEDIR/Icon.png\" \"$PLUGIN/Contents/Resources/DM2USBMIDIDriver.plugin\"`;\n\n#EOF";
+			shellScript = "# /usr/bin/perl -w\n#\n# Last updated: 21MAR06, Andy O'Meara and Rob Barris\n#\n# This is an Xcode post-build phase script for devs who sleep better at night knowing\n#    that their deployment binaries are as stripped as possible.  This makes life more difficult\n#    for a hacker/cracker to locate sensitive code to trace, study, and/or extract.\n#\n# This script will execute only if the Xcode \"Deployment Postprocessing\" setting\n#    is set (aka DEPLOYMENT_POSTPROCESSING).\n#\n# The downside to shipping a stripped binary is that your user's crash reports\n#    will be useless unless you have a link map to convert code offsets (from a stack trace)\n#    into proc names.  To address this, this script moves your pre-stripped executable\n#    to the build dir, appending \"_full\" to the filename, allowing you to retain it for\n#    the day you need it in order to decipher a stack trace.  You do this by using 'atos'\n#    with the original generated binary (type 'man atos' for info).\n#\n# Recommended Xcode build settings:\n#    Dead Code Stripping                  YES\n#    Only Link In Essential Symbols       NO\n#    Deployment Postprocessing            YES (this activates this script)\n#    Strip Linked Product                 NO\n#    Use Separate Strip                   NO\n#    Strip Style                          All Symbols\n#    Strip Debug Symbols During Copy      NO\n#    Preserve Private External Symbols    NO\n#    Separate PCH Symbols                 YES\n#    Symbols Hidden By Default            YES (Critical!)\n#    Inline Functions Hidden              YES\n#\n# Note that if you're building a dynamic library, you'll need to explicitly\n#    declare any symbols that you want to be exported.  See the following:\n#    file:///Developer/ADC%20Reference%20Library/documentation/DeveloperTools/Conceptual/CppRuntimeEnv/Articles/SymbolVisibility.html\n#\n\nuse strict;\n\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\nexit 0;\n# This script is activated via an Xcode env flag.\nif ( $ENV{DEPLOYMENT_POSTPROCESSING} ne \"YES\" ) {\n\tgoto seticon;\n   exit 0;\n}\n\nprint \"\\n\\n==================== Commencing external stripping phase...\\n\";\n   \nmy $PLUGIN\t   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}\";     \nmy $BINARY       = \"$PLUGIN/Contents/MacOS/$ENV{EXECUTABLE_NAME}\";\nmy $BINARY_FULL  = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{EXECUTABLE_NAME}_full\";\nmy $BINARY_i386  = \"${BINARY}_i386\";\nmy $BINARY_x86_64  = \"${BINARY}_x86_64\";\nmy $BINARY_ppc   = \"${BINARY}_ppc\";\nmy $RELEASEDIR   = \"$ENV{SRCROOT}/Release Files\";\n       \n# Extract each arch into a \"thin\" binary for stripping\n`lipo \"$BINARY\" -thin ppc7400 -output \"$BINARY_ppc\" `;\n`lipo \"$BINARY\" -thin i386 -output \"$BINARY_i386\"`;\n`lipo \"$BINARY\" -thin x86_64 -output \"$BINARY_x86_64\"`;\n\n# Retain the orignal binary for QA and use with the util 'atos'\n`mv -f \"$BINARY\" \"$BINARY_FULL\"`;\n\n# Perform desired stripping on each thin binary.  \n`strip -S -x -o \"${BINARY_ppc}_tmp\"  -r \"$BINARY_ppc\" `;\n`strip -S -x -o \"${BINARY_i386}_tmp\" -r \"$BINARY_i386\"`;\n`strip -S -x -o \"${BINARY_x86_64}_tmp\" -r \"$BINARY_x86_64\"`;\n\n# We're now done with the original thin binaries, so chuck them.\n`rm -f \"$BINARY_ppc\" `;\n`rm -f \"$BINARY_i386\"`;\n`rm -f \"$BINARY_x86_64\"`;\n\n# Make the new universal binary from our stripped thin pieces.\n`lipo -arch i386 \"${BINARY_i386}_tmp\" -arch ppc7400 \"${BINARY_ppc}_tmp\" -arch x86_64 \"${BINARY_x86_64}_tmp\" -create -output \"$BINARY\"`;\n\n# We're now done with the temp thin binaries, so chuck them.\n`rm -f \"${BINARY_ppc}_tmp\"`;\n`rm -f \"${BINARY_i386}_tmp\"`;\n`rm -f \"${BINARY_x86_64}_tmp\"`;\n\nprint \"\\n==================== External strip phase complete\\n\";\nseticon:\nprint \"==Set icon\\n\";\n`\"$ENV{SRCROOT}/Other/seticon\" -d \"$RELEASEDIR/../PrefpaneIcon.icns\" \"$PLUGIN\"`;\n`\"$ENV{SRCROOT}/Other/seticon\" \"$RELEASEDIR/Icon.png\" \"$PLUGIN/Contents/Resources/DM2USBMIDIDriver.plugin\"`;\n\n#EOF";
 		};
 		305A6BB90C88D8D600D17230 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -823,7 +825,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/bin/perl;
-			shellScript = "# /usr/bin/perl -w\n#\n# Last updated: 21MAR06, Andy O'Meara and Rob Barris\n#\n# This is an Xcode post-build phase script for devs who sleep better at night knowing\n#    that their deployment binaries are as stripped as possible.  This makes life more difficult\n#    for a hacker/cracker to locate sensitive code to trace, study, and/or extract.\n#\n# This script will execute only if the Xcode \"Deployment Postprocessing\" setting\n#    is set (aka DEPLOYMENT_POSTPROCESSING).\n#\n# The downside to shipping a stripped binary is that your user's crash reports\n#    will be useless unless you have a link map to convert code offsets (from a stack trace)\n#    into proc names.  To address this, this script moves your pre-stripped executable\n#    to the build dir, appending \"_full\" to the filename, allowing you to retain it for\n#    the day you need it in order to decipher a stack trace.  You do this by using 'atos'\n#    with the original generated binary (type 'man atos' for info).\n#\n# Recommended Xcode build settings:\n#    Dead Code Stripping                  YES\n#    Only Link In Essential Symbols       NO\n#    Deployment Postprocessing            YES (this activates this script)\n#    Strip Linked Product                 NO\n#    Use Separate Strip                   NO\n#    Strip Style                          All Symbols\n#    Strip Debug Symbols During Copy      NO\n#    Preserve Private External Symbols    NO\n#    Separate PCH Symbols                 YES\n#    Symbols Hidden By Default            YES (Critical!)\n#    Inline Functions Hidden              YES\n#\n# Note that if you're building a dynamic library, you'll need to explicitly\n#    declare any symbols that you want to be exported.  See the following:\n#    file:///Developer/ADC%20Reference%20Library/documentation/DeveloperTools/Conceptual/CppRuntimeEnv/Articles/SymbolVisibility.html\n#\n\nuse strict;\n\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n#exit 0;\n# This script is activated via an Xcode env flag.\nif ( $ENV{DEPLOYMENT_POSTPROCESSING} ne \"YES\" ) {\n\tgoto seticon;\n   exit 0;\n}\n\nprint \"\\n\\n==================== Commencing external stripping phase...\\n\";\n   \nmy $PLUGIN\t   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}\";     \nmy $BINARY       = \"$PLUGIN/Contents/MacOS/$ENV{EXECUTABLE_NAME}\";\nmy $BINARY_FULL  = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{EXECUTABLE_NAME}_full\";\nmy $BINARY_i386  = \"${BINARY}_i386\";\nmy $BINARY_x86_64  = \"${BINARY}_x86_64\";\nmy $BINARY_ppc   = \"${BINARY}_ppc\";\nmy $RELEASEDIR   = \"$ENV{SRCROOT}/Release Files\";\n       \n# Extract each arch into a \"thin\" binary for stripping\n`lipo \"$BINARY\" -thin  ppc -output \"$BINARY_ppc\" `;\n`lipo \"$BINARY\" -thin i386 -output \"$BINARY_i386\"`;\n`lipo \"$BINARY\" -thin x86_64 -output \"$BINARY_x86_64\"`;\n\n# Retain the orignal binary for QA and use with the util 'atos'\n`mv -f \"$BINARY\" \"$BINARY_FULL\"`;\n\n# Perform desired stripping on each thin binary.  \n`strip -S -x -o \"${BINARY_ppc}_tmp\"  -r \"$BINARY_ppc\" `;\n`strip -S -x -o \"${BINARY_i386}_tmp\" -r \"$BINARY_i386\"`;\n`strip -S -x -o \"${BINARY_x86_64}_tmp\" -r \"$BINARY_x86_64\"`;\n\n# We're now done with the original thin binaries, so chuck them.\n`rm -f \"$BINARY_ppc\" `;\n`rm -f \"$BINARY_i386\"`;\n`rm -f \"$BINARY_x86_64\"`;\n\n# Make the new universal binary from our stripped thin pieces.\n`lipo -arch i386 \"${BINARY_i386}_tmp\" -arch ppc \"${BINARY_ppc}_tmp -arch x86_64 \"${BINARY_x86_64}_tmp\" -create -output \"$BINARY\"`;\n\n# We're now done with the temp thin binaries, so chuck them.\n`rm -f \"${BINARY_ppc}_tmp\" `;\n`rm -f \"${BINARY_i386}_tmp\"`;\n`rm -f \"${BINARY_x86_64}_tmp\"`;\n\n\nprint \"\\n==================== External strip phase complete\\n\";\nseticon:\nprint \"==Set icon\\n\";\n`\"$ENV{SRCROOT}/Other/seticon\" \"$RELEASEDIR/Icon.png\" \"$PLUGIN\"`;\n\n#EOF\n";
+			shellScript = "# /usr/bin/perl -w\n#\n# Last updated: 21MAR06, Andy O'Meara and Rob Barris\n#\n# This is an Xcode post-build phase script for devs who sleep better at night knowing\n#    that their deployment binaries are as stripped as possible.  This makes life more difficult\n#    for a hacker/cracker to locate sensitive code to trace, study, and/or extract.\n#\n# This script will execute only if the Xcode \"Deployment Postprocessing\" setting\n#    is set (aka DEPLOYMENT_POSTPROCESSING).\n#\n# The downside to shipping a stripped binary is that your user's crash reports\n#    will be useless unless you have a link map to convert code offsets (from a stack trace)\n#    into proc names.  To address this, this script moves your pre-stripped executable\n#    to the build dir, appending \"_full\" to the filename, allowing you to retain it for\n#    the day you need it in order to decipher a stack trace.  You do this by using 'atos'\n#    with the original generated binary (type 'man atos' for info).\n#\n# Recommended Xcode build settings:\n#    Dead Code Stripping                  YES\n#    Only Link In Essential Symbols       NO\n#    Deployment Postprocessing            YES (this activates this script)\n#    Strip Linked Product                 NO\n#    Use Separate Strip                   NO\n#    Strip Style                          All Symbols\n#    Strip Debug Symbols During Copy      NO\n#    Preserve Private External Symbols    NO\n#    Separate PCH Symbols                 YES\n#    Symbols Hidden By Default            YES (Critical!)\n#    Inline Functions Hidden              YES\n#\n# Note that if you're building a dynamic library, you'll need to explicitly\n#    declare any symbols that you want to be exported.  See the following:\n#    file:///Developer/ADC%20Reference%20Library/documentation/DeveloperTools/Conceptual/CppRuntimeEnv/Articles/SymbolVisibility.html\n#\n\nuse strict;\n\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n\n# This script is activated via an Xcode env flag.\nif ( $ENV{DEPLOYMENT_POSTPROCESSING} ne \"YES\" ) {\n\tgoto seticon;\n   exit 0;\n}\n\nprint \"\\n\\n==================== Commencing external stripping phase...\\n\";\n   \nmy $PLUGIN\t   = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}\";     \nmy $BINARY       = \"$PLUGIN/Contents/MacOS/$ENV{EXECUTABLE_NAME}\";\nmy $BINARY_FULL  = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{EXECUTABLE_NAME}_full\";\nmy $BINARY_i386  = \"${BINARY}_i386\";\nmy $BINARY_x86_64  = \"${BINARY}_x86_64\";\nmy $BINARY_ppc   = \"${BINARY}_ppc\";\nmy $RELEASEDIR   = \"$ENV{SRCROOT}/Release Files\";\n       \n# Extract each arch into a \"thin\" binary for stripping\n`lipo \"$BINARY\" -thin ppc -output \"$BINARY_ppc\" `;\n`lipo \"$BINARY\" -thin i386 -output \"$BINARY_i386\"`;\n`lipo \"$BINARY\" -thin x86_64 -output \"$BINARY_x86_64\"`;\n\n# Retain the orignal binary for QA and use with the util 'atos'\n`mv -f \"$BINARY\" \"$BINARY_FULL\"`;\n\n# Perform desired stripping on each thin binary.  \n`strip -S -x -o \"${BINARY_ppc}_tmp\"  -r \"$BINARY_ppc\" `;\n`strip -S -x -o \"${BINARY_i386}_tmp\" -r \"$BINARY_i386\"`;\n`strip -S -x -o \"${BINARY_x86_64}_tmp\" -r \"$BINARY_x86_64\"`;\n\n# We're now done with the original thin binaries, so chuck them.\n`rm -f \"$BINARY_ppc\" `;\n`rm -f \"$BINARY_i386\"`;\n`rm -f \"$BINARY_x86_64\"`;\n\n# Make the new universal binary from our stripped thin pieces.\n`lipo -arch i386 \"${BINARY_i386}_tmp\" -arch ppc \"${BINARY_ppc}_tmp\" -arch x86_64 \"${BINARY_x86_64}_tmp\" -create -output \"$BINARY\"`;\n\n# We're now done with the temp thin binaries, so chuck them.\n`rm -f \"${BINARY_ppc}_tmp\" `;\n`rm -f \"${BINARY_i386}_tmp\"`;\n`rm -f \"${BINARY_x86_64}_tmp\"`;\n\n\nprint \"\\n==================== External strip phase complete\\n\";\nseticon:\nprint \"==Set icon\\n\";\n`\"$ENV{SRCROOT}/Other/seticon\" \"$RELEASEDIR/Icon.png\" \"$PLUGIN\"`;\n\n#EOF\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1191,6 +1193,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "DM2USBMIDIDriver/Info-DM2USBMIDIDriver.plist";
 				INSTALL_PATH = "/Library/Audio/MIDI Drivers";
 				OTHER_CFLAGS = "";
@@ -1199,14 +1202,9 @@
 					"-weak_framework",
 					Growl,
 				);
-				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = DM2USBMIDIDriver;
+				SDKROOT = "";
 				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
@@ -1217,9 +1215,12 @@
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH)";
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
 			};
 			name = Development;
 		};
@@ -1230,11 +1231,13 @@
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				DEAD_CODE_STRIPPING = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Deployment;
