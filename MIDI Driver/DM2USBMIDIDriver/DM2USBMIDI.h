@@ -30,10 +30,10 @@
 #define ON FALSE
 #define OFF TRUE
 
-#if DEBUG
-#define DEBUG_WRITE		0
-#define DEBUG_READ		0
-#define DEBUG_BUTTONS	1
+#ifdef DEBUG
+	#define DEBUG_WRITE		0
+	#define DEBUG_READ		0
+	#define DEBUG_BUTTONS	1
 #endif
 
 #define appID CFSTR("com.joemattiello.driver.dm2")
@@ -56,9 +56,9 @@ public:
 	virtual MIDIDeviceRef	CreateDevice(		USBDevice *		inUSBDevice,
 												USBInterface *	inUSBInterface);
 	
-	virtual void			PreExistingDeviceFound(	MIDIDeviceRef	inMIDIDevice,
-												   USBDevice *		inUSBDevice,
-												   USBInterface *	inUSBInterface);
+//	virtual void			PreExistingDeviceFound(	MIDIDeviceRef	inMIDIDevice,
+//												   USBDevice *		inUSBDevice,
+//												   USBInterface *	inUSBInterface);
 	
 
 	virtual USBInterface *	CreateInterface(	USBMIDIDevice *	usbmDev);

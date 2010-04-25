@@ -70,7 +70,7 @@ void	IOBuffer::Allocate(void *owner, UInt32 size)
 
 // _________________________________________________________________________________________
 
-#if DEBUG
+#ifdef DEBUG
 // Dynamically look up DebugAssert so we don't have to link against CoreServices
 // just for it.
 #include <mach-o/dyld.h>

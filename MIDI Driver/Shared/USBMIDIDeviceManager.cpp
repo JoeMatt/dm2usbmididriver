@@ -41,7 +41,7 @@
 #include "USBMIDIDeviceManager.h"
 #include "USBMIDIDevice.h"
 
-#if DEBUG
+#ifdef DEBUG
 	//#define VERBOSE 1
 #endif
 

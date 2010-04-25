@@ -144,7 +144,7 @@ void  MixxxConfiguration::leftRingSpun(DM2USBMIDIDriver * dm2)
 			dm2->noteBuf[1] = leftRingCCValue;
 			dm2->noteBuf[2] = diff;
 			dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, dm2->noteBuf );
-#if DEBUG
+#ifdef DEBUG
 			printf("Sending left ring: %x %i %i\n",dm2->noteBuf[0],dm2->noteBuf[1],dm2->noteBuf[2]);
 #endif
 		}
@@ -238,7 +238,7 @@ void MixxxConfiguration::rightRingSpun(DM2USBMIDIDriver * dm2)
 			dm2->noteBuf[1] = rightRingCCValue;
 			dm2->noteBuf[2] = diff;
 			dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, dm2->noteBuf );
-#if DEBUG
+#ifdef DEBUG
 			printf("Sending right ring: %x %i %i\n",dm2->noteBuf[0],dm2->noteBuf[1],dm2->noteBuf[2]);
 #endif
 		}

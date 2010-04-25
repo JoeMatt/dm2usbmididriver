@@ -7,7 +7,7 @@
 #import "NSApplicationAdditions.h"
 #import "NSStringAdditions.h"
 
-#if DEBUG
+#ifdef DEBUG
 	#define DEBUGLog(a)				NSLog(@#a)
 	#define IGNORE_REGISTRATION
 #else
