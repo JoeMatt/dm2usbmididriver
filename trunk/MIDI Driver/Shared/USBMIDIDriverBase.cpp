@@ -46,7 +46,7 @@
 #define CAN_USE_USB_UNPARSED_EVENTS 1
 #endif
 
-#if DEBUG
+#ifdef DEBUG
 	#include <stdio.h>
 	//#define VERBOSE 1
 	
@@ -117,8 +117,10 @@ void	USBMIDIDriverBase::USBMIDIHandleInput(	USBMIDIDevice *	usbmDev,
 	bool insysex = false;
 
 	for ( ; src < srcend; src += 4) {
-		int cin = src[0] & 0x0F;
-		
+		int cin = src[0] >> 4;//& 0x0F;
+#ifdef DEBUG
+		//printf("----CIN:%x ,src%i\n",cin,src[2]);
+#endif
 		if (cin < 2)
 			// skip over reserved cin's before doing any more work
 			continue;
