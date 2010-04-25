@@ -246,7 +246,7 @@ inline int		MIDIDataBytes(Byte status)
 		return 0;
 	}
 
-#if DEBUG
+#ifdef DEBUG
 	fprintf(stderr, "MIDIDataBytes: illegal status byte %02X\n", status);
 #endif
 	return 0;   // the MIDI spec says we should ignore illegals.
@@ -254,7 +254,7 @@ inline int		MIDIDataBytes(Byte status)
 
 // _________________________________________________________________________________________
 //
-#if DEBUG
+#ifdef DEBUG
 class Profiler {
 public:
 	Profiler(const char *funcName, UInt32 threshMicros = 0) : 

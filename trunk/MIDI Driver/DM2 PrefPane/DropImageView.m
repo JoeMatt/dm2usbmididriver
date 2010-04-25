@@ -35,7 +35,7 @@
 		[self setImageScaling:NSScaleToFit];
 		//Drag from safari candidates that still have valid xml are, com.apple.webarchive, "NeXT RTFD pasteboard type"
 		[self registerForDraggedTypes:dragTypes];
-	#if DEBUG	
+	#ifdef DEBUG	
 		NSLog(@"DropImageView initialized");
 	#endif
     }

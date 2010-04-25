@@ -45,7 +45,7 @@ extern "C" {
 #include "IOServiceClient.h"
 #include <unistd.h>
 
-#if DEBUG
+#ifdef DEBUG
 	#include <stdio.h>
 	//#define VERBOSE 1
 #endif

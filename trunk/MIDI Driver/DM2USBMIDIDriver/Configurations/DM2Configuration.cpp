@@ -365,7 +365,7 @@ void DM2Configuration::leftRingSpun(DM2USBMIDIDriver * dm2)
 		noteBuf[1] = dm2->status.accel_left < 0 ? kNOTE_BASIC_LEFTRINGBACKWARD : kNOTE_BASIC_LEFTRINGFORWARD;
 		noteBuf[2] = accel;
 		dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, noteBuf );
-		#if DEBUG
+		#ifdef DEBUG
 		printf("Sending left ring: %x %i %i\n",noteBuf[0],noteBuf[1],noteBuf[2]);
 		#endif
 	}
@@ -375,12 +375,12 @@ void DM2Configuration::leftRingSpun(DM2USBMIDIDriver * dm2)
 		noteBuf[1] = kNOTE_BASIC_LEFTRINGBACKWARD;
 		noteBuf[2] = 0;								
 		dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, noteBuf );
-		#if DEBUG
+		#ifdef DEBUG
 		printf("Sending left ring: %x %i %i\n",noteBuf[0],noteBuf[1],noteBuf[2]);
 		#endif
 		noteBuf[1] = kNOTE_BASIC_LEFTRINGFORWARD;
 		dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, noteBuf );
-		#if DEBUG
+		#ifdef DEBUG
 		printf("Sending left ring: %x %i %i\n",noteBuf[0],noteBuf[1],noteBuf[2]);
 		#endif
 	}
@@ -427,7 +427,7 @@ void DM2Configuration::rightRingSpun(DM2USBMIDIDriver * dm2)
 		noteBuf[1] = dm2->status.accel_right < 0 ? kNOTE_BASIC_RIGHTRINGBACKWARD : kNOTE_BASIC_RIGHTRINGFORWARD;
 		noteBuf[2] = accel;
 		dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, noteBuf );
-	#if DEBUG
+	#ifdef DEBUG
 		printf("Sending right ring: %x %i %i\n",noteBuf[0],noteBuf[1],noteBuf[2]);
 	#endif
 	}
@@ -437,12 +437,12 @@ void DM2Configuration::rightRingSpun(DM2USBMIDIDriver * dm2)
 		noteBuf[1] = kNOTE_BASIC_RIGHTRINGBACKWARD;
 		noteBuf[2] = 0;								
 		dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, noteBuf );
-	#if DEBUG
+	#ifdef DEBUG
 		printf("Sending right ring: %x %i %i\n",noteBuf[0],noteBuf[1],noteBuf[2]);
 	#endif
 		noteBuf[1] = kNOTE_BASIC_RIGHTRINGFORWARD;
 		dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, noteBuf );
-	#if DEBUG
+	#ifdef DEBUG
 		printf("Sending right ring: %x %i %i\n",noteBuf[0],noteBuf[1],noteBuf[2]);
 	#endif
 	}
@@ -462,7 +462,7 @@ void DM2Configuration::rightRingSpun(DM2USBMIDIDriver * dm2)
 	dm2->noteBuf[1] = kNOTE_BASIC_CC_DECKB; //kNOTE_BASIC_RIGHTRINGFORWARD;
 	dm2->noteBuf[2] = accel;
 	dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, dm2->noteBuf );
-#if DEBUG
+#ifdef DEBUG
 	printf("Sending right ring: %x %i %i\n",dm2->noteBuf[0],dm2->noteBuf[1],dm2->noteBuf[2]);
 #endif
 	
@@ -504,7 +504,7 @@ void DM2Configuration::makeBasicNote(bool status,int noteNumber, DM2USBMIDIDrive
 	dm2->noteBuf[2] = 127;
 	
 	dm2->pkt = MIDIPacketListAdd(dm2->pktlist, sizeof(dm2->pbuf), dm2->pkt, dm2->timeStamp, 3, dm2->noteBuf );
-	#if DEBUG
+	#ifdef DEBUG
 	printf("Sending basic note, status: %x, note#: %i\n",dm2->noteBuf[0],dm2->noteBuf[1]);
 	#endif
 }

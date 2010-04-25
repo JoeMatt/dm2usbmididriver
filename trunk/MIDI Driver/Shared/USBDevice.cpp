@@ -54,7 +54,7 @@
 	0x8E, 0x3E, 0xDC, 0x36, 0x04, 0x69, 0x87, 0xAD)
 #endif
 
-#if DEBUG
+#ifdef DEBUG
 //#define VERBOSE 1
 #endif
 
@@ -150,7 +150,7 @@ const IOUSBDeviceDescriptor *	USBDevice::GetDeviceDescriptor()
 	}
 	
 	if (LoadDescriptor(kUSBDeviceDesc, 0, 0, &mDeviceDesc, sizeof(mDeviceDesc)) < 0) {
-#if DEBUG
+#ifdef DEBUG
 		printf("device @ 0x%08lX - can't get descriptor\n", mLocationID);
 #endif
 		goto errexit;
@@ -271,7 +271,7 @@ int		USBDevice::LoadDescriptor(			UInt8					descType,
 	
 	IOReturn err;
 	err = (*deviceIntf)->DeviceRequest(deviceIntf, &req);
-#if DEBUG
+#ifdef DEBUG
 	// filter out errors that are apparently normal, before a DebugAssert fires
 	if (err == kIOUSBPipeStalled && descType == kUSBStringDesc && descIndex == 0)
 		return -1;

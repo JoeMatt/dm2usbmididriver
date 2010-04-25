@@ -136,24 +136,24 @@ MIDIDeviceRef	DM2USBMIDIDriver::CreateDevice(	USBDevice *	inUSBDevice, USBInterf
 	}
 	return dev;
 }
-
+/*
 void	DM2USBMIDIDriver::PreExistingDeviceFound(	MIDIDeviceRef	inMIDIDevice,
 									   USBDevice *		inUSBDevice,
 									   USBInterface *	inUSBInterface)
 {
 	IOReturn ioreturn;
-	printf("OH SNAP!!!\\n");
+//	printf("OH SNAP!!!\n");
 	IOUSBDeviceInterface187 **	deviceInterface = (IOUSBDeviceInterface187**) inUSBDevice->GetPluginInterface();
 	
 //	ioreturn = (*deviceInterface)->USBDeviceOpen(deviceInterface);
 //	if( ioreturn == kIOReturnExclusiveAccess)
-//		printf("Cant get exclusive access");
+//		printf("Cant get exclusive access\n");
 //	else if(ioreturn == kIOReturnError)
-//		printf("Some error");
+//		printf("Some error\n");
 //	else if(ioreturn == kIOReturnSuccess)
-//		printf("Open was success");
+//		printf("Open was success\n");
 //	else
-//		printf("I don't kn ow");
+//		printf("I don't know\n");
 	
 	//(*deviceInterface)->SetConfiguration(deviceInterface, 0);
 	//(*deviceInterface)->ResetDevice(deviceInterface);
@@ -191,14 +191,14 @@ void	DM2USBMIDIDriver::PreExistingDeviceFound(	MIDIDeviceRef	inMIDIDevice,
 		//(*theUsbInterfaceRef)->Release(theUsbInterfaceRef);
 		//(*theUsbInterfaceRef)->USBInterfaceClose(theUsbInterfaceRef);
 		//(*theUsbInterfaceRef)->ReadPipe(theUsbInterfaceRef,0x81,nil,nil);
-		UInt8 numendpoints;
-		(*theUsbInterfaceRef)->GetNumEndpoints(theUsbInterfaceRef, &numendpoints);
-		printf("Number of endpoints : %u", numendpoints); 
-		UInt8 x;
-		for(x=0; x<numendpoints;x++)
-			(*theUsbInterfaceRef)->ClearPipeStallBothEnds(theUsbInterfaceRef,x);
+//		UInt8 numendpoints;
+//		(*theUsbInterfaceRef)->GetNumEndpoints(theUsbInterfaceRef, &numendpoints);
+//		printf("Number of endpoints : %u\n", numendpoints); 
+//		UInt8 x;
+//		for(x=0; x<numendpoints;x++)
+//			(*theUsbInterfaceRef)->ClearPipeStallBothEnds(theUsbInterfaceRef,x);
 		
-		printf("dd shit\n");
+	//	printf("dd shit\n");
 	}
 	IOObjectRelease(interface_iterator);
 	
@@ -212,7 +212,7 @@ void	DM2USBMIDIDriver::PreExistingDeviceFound(	MIDIDeviceRef	inMIDIDevice,
 	//intf->AbortPipe(intf,2);
 	//GusbmDev->Initialize();
 }
-
+*/
 
 
 USBInterface *	DM2USBMIDIDriver::CreateInterface(USBMIDIDevice *device)
@@ -321,7 +321,7 @@ void DM2USBMIDIDriver::resetInterface()
 }
 void		DM2USBMIDIDriver::StopInterface(USBMIDIDevice *usbmDev)
 {
-	#if DEBUG	
+	#ifdef DEBUG	
 	printf("Removing notifier\n");
 	#endif
 	//Clean-up notifier
@@ -581,7 +581,7 @@ void		DM2USBMIDIDriver::HandleInput(USBMIDIDevice *usbmDev, MIDITimeStamp when, 
 	}
 	else
 	{	// Any other size isn't valid
-		#if DEBUG
+		#ifdef DEBUG
 		printf("Error: Unknown message\n");
 		#endif
 		return;
@@ -589,7 +589,7 @@ void		DM2USBMIDIDriver::HandleInput(USBMIDIDevice *usbmDev, MIDITimeStamp when, 
 
 	//If we got this far, we must have some changes to save and send down the midi pipe.
 	
-	#if DEBUG_READ
+	#ifdef DEBUG_READ
 	printf_dm2();
 	#endif
 	
@@ -724,7 +724,7 @@ void DM2USBMIDIDriver::sendLights(USBMIDIDevice *usbmDev)
 		(void) (*intf)->USBInterfaceClose(intf);
 		(void) (*intf)->Release(intf);
 	}
-	#if DEBUG_WRITE
+	#ifdef DEBUG_WRITE
 	else
 		printf("Wrote \"%4X\" (%ld bytes) to bulk endpoint\n", buffer[0], (UInt32) strlen(buffer));
 	#endif
@@ -769,7 +769,7 @@ void DM2USBMIDIDriver::sendLights(USBMIDIDevice *usbmDev,uint16_t * ledStatus)
 		(void) (*intf)->USBInterfaceClose(intf);
 		(void) (*intf)->Release(intf);
 	}
-#if DEBUG_WRITE
+#ifdef DEBUG_WRITE
 	else
 		printf("Wrote \"%4X\" (%ld bytes) to bulk endpoint\n", buffer[0], (UInt32) strlen(buffer));
 #endif
@@ -782,7 +782,7 @@ void DM2USBMIDIDriver::sendLights()
 
 void DM2USBMIDIDriver::readSettings()
 {
-#if DEBUG
+#ifdef DEBUG
 	printf("Read Settings\n");
 #endif
 	CFPropertyListRef rtn;
@@ -818,7 +818,7 @@ void DM2USBMIDIDriver::readSettings()
 	
 	currentConfig->readSettings();
 	
-#if DEBUG
+#ifdef DEBUG
 	printf("Software Mode: %s\n",CFStringGetCStringPtr(softwareMode,0));
 #endif
 	
@@ -954,7 +954,7 @@ ByteCount	DM2USBMIDIDriver::PrepareOutput(USBMIDIDevice *usbmDev, WriteQueue &wr
 						bool onMessage;
 						onMessage = ((c >> 4 ) == 0x9);
 						currentConfig->buttonReceived(ledNumber, changedBank, velocity, onMessage); 
-						#if DEBUG
+						#ifdef DEBUG
 						printf("Received, LED#: %i, Vel: %i\n",ledNumber,velocity);
 						#endif
 						if(changedBank == currentConfig->currentBank)
@@ -972,7 +972,7 @@ ByteCount	DM2USBMIDIDriver::PrepareOutput(USBMIDIDevice *usbmDev, WriteQueue &wr
 						bool onMessage;
 						onMessage = ((c >> 4 ) == 0x9);
 						currentConfig->buttonReceived(ledNumber, mixxxConfig->bank1, velocity, onMessage); 
-						#if DEBUG
+						#ifdef DEBUG
 						printf("Mixxx Received, LED#: %i, Vel: %i\n",ledNumber,velocity);
 						#endif
 						sendLights();
