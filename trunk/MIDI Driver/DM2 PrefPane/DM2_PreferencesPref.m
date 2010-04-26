@@ -190,6 +190,19 @@
 	}
 	[bank4WhoControlsLEDsPopUpButton selectItemAtIndex:row];
 	
+	/** Advanced **/
+	value = CFPreferencesCopyAppValue( CFSTR("midiClockResolution") , appID );
+	row = 0;
+	if( value && CFStringCompare((CFStringRef) value,CFSTR("32nd"),0) == 0)
+	{
+		row = 1;
+	}
+	else if( value && CFStringCompare(value,CFSTR("1/4"),0) == 0)
+	{
+		row = 2;
+	}
+	[midiClockResolutionMatrix selectCellAtRow:row column:0];
+	
 	value = CFPreferencesCopyAppValue( CFSTR("autoUpdate"),  appID );
     if ( value && CFGetTypeID(value) == CFBooleanGetTypeID()  ) {
         [checkAutomaticallyCheckbox setState:CFBooleanGetValue(value)];
@@ -212,6 +225,7 @@
 	statusTab = [tabView tabViewItemAtIndex:[tabView indexOfTabViewItemWithIdentifier:@"status"]];
 	aboutTab = [tabView tabViewItemAtIndex:[tabView indexOfTabViewItemWithIdentifier:@"about"]];
 	traktorTab = [tabView tabViewItemAtIndex:[tabView indexOfTabViewItemWithIdentifier:@"traktor"]];
+//	advancedTab = [tabView tabViewItemAtIndex:[tabView indexOfTabViewItemWithIdentifier:@"advanced"]];
 	
 	[softwareModeButton setAutoenablesItems:NO];
 
@@ -366,7 +380,31 @@
 }
 
 /******** Bank Buttons End *******/
-
+/******** Advanced Page ***********/
+- (IBAction)midiClockResolutionMatrixChanged:(id)sender
+{
+	NSMatrix * matrix = (NSMatrix *)sender;
+	NSString * setting;
+	int row = [matrix selectedRow];
+	switch(row)
+	{
+		//case 0:
+		//	setting = [NSString stringWithString:@"16th"];
+		//	break;
+		case 1:
+			setting = [NSString stringWithString:@"32nd"];
+			break;
+		case 2:
+			setting = [NSString stringWithString:@"1/4"];
+			break;
+		default:
+			setting = [NSString stringWithString:@"16th"];
+	}
+	CFPreferencesSetAppValue( CFSTR("midiClockResolution"),
+							 (CFStringRef)setting,appID);
+	if(setting)
+		[setting release];
+}
 
 /********* About Page *************/
 - (IBAction)contactAuthorButtonClicked:(id)sender
