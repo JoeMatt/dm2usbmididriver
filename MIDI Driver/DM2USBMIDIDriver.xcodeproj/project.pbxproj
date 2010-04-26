@@ -116,9 +116,8 @@
 		3EB3AB5B079D51BB0046E3F3 /* CAHostTimeBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F490F210C5B03DDB00A007D0 /* CAHostTimeBase.cpp */; };
 		3EB3AB5C079D51BB0046E3F3 /* CAMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F490F214C5B03DDB00A007D0 /* CAMutex.cpp */; };
 		3EB3AB5E079D51BB0046E3F3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
-		3EB3AB5F079D51BB0046E3F3 /* CoreMIDIServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5706D20014B0B17015B338A /* CoreMIDIServer.framework */; };
 		3EB3AB60079D51BB0046E3F3 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5706D23014B0BC6015B338A /* IOKit.framework */; };
-		B32956FB104C4A3F000C5C3E /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32956FA104C4A3F000C5C3E /* CoreMIDI.framework */; };
+		B3BCD4B2118511A800AC0FF2 /* CoreMIDIServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BCD4B1118511A800AC0FF2 /* CoreMIDIServer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,7 +261,7 @@
 		30E772320C032986003A8664 /* dm2_old.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = dm2_old.cpp; sourceTree = "<group>"; };
 		30E772330C032986003A8664 /* dm2_old.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = dm2_old.h; sourceTree = "<group>"; };
 		3EB3AB62079D51BB0046E3F3 /* Info-DM2USBMIDIDriver.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-DM2USBMIDIDriver.plist"; sourceTree = "<group>"; };
-		B32956FA104C4A3F000C5C3E /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		B3BCD4B1118511A800AC0FF2 /* CoreMIDIServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDIServer.framework; path = System/Library/Frameworks/CoreMIDIServer.framework; sourceTree = SDKROOT; };
 		F490F210C5B03DDB00A007D0 /* CAHostTimeBase.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CAHostTimeBase.cpp; sourceTree = "<group>"; };
 		F490F211C5B03DDB00A007D0 /* CAHostTimeBase.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CAHostTimeBase.h; sourceTree = "<group>"; };
 		F490F214C5B03DDB00A007D0 /* CAMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = CAMutex.cpp; sourceTree = "<group>"; };
@@ -334,13 +333,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EB3AB5E079D51BB0046E3F3 /* CoreFoundation.framework in Frameworks */,
-				3EB3AB5F079D51BB0046E3F3 /* CoreMIDIServer.framework in Frameworks */,
 				3EB3AB60079D51BB0046E3F3 /* IOKit.framework in Frameworks */,
 				30A21A6D0C5E8D5B002EF13D /* Foundation.framework in Frameworks */,
 				307D0F8B0C7918030078AAAF /* CoreServices.framework in Frameworks */,
 				309127440C9E08CB00BA3923 /* Growl.framework in Frameworks */,
 				30636F2C0D9CA04C006B4042 /* AppKit.framework in Frameworks */,
-				B32956FB104C4A3F000C5C3E /* CoreMIDI.framework in Frameworks */,
+				B3BCD4B2118511A800AC0FF2 /* CoreMIDIServer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +355,6 @@
 				3098389D0D62898E00EF6F20 /* Shared */,
 				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
 				19C28FB6FE9D52B211CA2CBB /* Products */,
-				B32956FA104C4A3F000C5C3E /* CoreMIDI.framework */,
 			);
 			name = MIDIDrivers;
 			sourceTree = "<group>";
@@ -379,6 +376,7 @@
 				F5706D20014B0B17015B338A /* CoreMIDIServer.framework */,
 				F5706D23014B0BC6015B338A /* IOKit.framework */,
 				F55F18B701554564010C93F4 /* CoreMIDI.framework */,
+				B3BCD4B1118511A800AC0FF2 /* CoreMIDIServer.framework */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -1215,7 +1213,8 @@
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH)";
 				GCC_OPTIMIZATION_LEVEL = 0;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				GCC_VERSION = 4.0;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1235,9 +1234,9 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = 4.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
 				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Deployment;

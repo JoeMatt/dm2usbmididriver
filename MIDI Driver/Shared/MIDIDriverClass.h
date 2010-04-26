@@ -41,7 +41,10 @@
 #ifndef __MIDIDriverClass_h__
 #define __MIDIDriverClass_h__
 
-#include <CoreMIDI/CoreMIDI.h>
+// If you're using < 10.6 then
+// #include <CoreMIDI/CoreMIDI.h>
+// else
+#include <CoreMIDIServer/CoreMIDIServer.h>
 
 #ifndef V1_MIDI_DRIVER_SUPPORT
 	#define V1_MIDI_DRIVER_SUPPORT	0
