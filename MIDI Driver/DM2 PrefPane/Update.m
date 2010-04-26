@@ -164,7 +164,6 @@
 	[self endUpdateConnection];
     
 	NSURL * downloadURL;
-	NSString * versionAvailable;
 	if (plist != nil) {
         downloadURL = [NSURL URLWithString:[plist valueForKey:@"url"]];
 		name = [NSString stringWithFormat:@"DM2 USB MIDI Driver version: %@",[plist valueForKey:@"Current Version"]];
