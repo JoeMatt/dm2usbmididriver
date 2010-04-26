@@ -20,7 +20,6 @@
 	NSTabViewItem * bank3Tab;
 	NSTabViewItem * bank4Tab;
 	NSTabViewItem * traktorTab;
-	NSTabViewItem * advancedTab;
 	NSTabViewItem * statusTab;
 	NSTabViewItem * aboutTab;
 	/* Global */
@@ -58,8 +57,6 @@
     IBOutlet NSButton * bank4InvertLedsCheckbox;
 	/* Status */
 	IBOutlet NSTextField * osWarningTextField;
-	/* Advanced */
-	IBOutlet NSMatrix * midiClockResolutionMatrix;
 	/* Traktor */
 	IBOutlet NSButton * exportTraktorButton;
 	/* About */
@@ -105,9 +102,6 @@
 - (IBAction)contactAuthorButtonClicked:(id)sender;
 - (IBAction)visitHomepageButtonClicked:(id)sender;
 - (IBAction)donateButtonClicked:(id)sender;
-
-/********* Advanced Page *********/
-- (IBAction)midiClockResolutionMatrixChanged:(id)sender;
 
 /********* All Pages *************/
 - (IBAction)saveButtonClicked:(id)sender;
