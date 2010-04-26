@@ -239,7 +239,7 @@ void		DM2USBMIDIDriver::StartInterface(USBMIDIDevice *usbmDev)
 		
 		if (ioreturn != kIOReturnSuccess)
 		{
-			printf("unable to do bulk write (%08x)\n", ioreturn);
+			printf("unable to do bulk write (%08x) Line:%i\n", ioreturn, __LINE__ );
 			(void) (*intf)->USBInterfaceClose(intf);
 			(void) (*intf)->Release(intf);
 		}
@@ -720,7 +720,7 @@ void DM2USBMIDIDriver::sendLights(USBMIDIDevice *usbmDev)
 	
 	if (ioreturn != kIOReturnSuccess)
 	{
-		printf("unable to do bulk write (%08x)\n", ioreturn);
+		printf("unable to do bulk write (%08x) Line:%i\n", ioreturn, __LINE__ );
 		(void) (*intf)->USBInterfaceClose(intf);
 		(void) (*intf)->Release(intf);
 	}
@@ -765,7 +765,7 @@ void DM2USBMIDIDriver::sendLights(USBMIDIDevice *usbmDev,uint16_t * ledStatus)
 	
 	if (ioreturn != kIOReturnSuccess)
 	{
-		printf("unable to do bulk write (%08x)\n", ioreturn);
+		printf("unable to do bulk write (%08x) Line:%i\n", ioreturn, __LINE__ );
 		(void) (*intf)->USBInterfaceClose(intf);
 		(void) (*intf)->Release(intf);
 	}
